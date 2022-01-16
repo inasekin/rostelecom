@@ -11,6 +11,7 @@ Thumbs.db
 *.log*
 node_modules/
 package-lock.json
+yarn.lock
 
 # Собранные файлы
 /dist
