@@ -1,0 +1,125 @@
+.section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+#section1{
+  background-color: #fff;
+}
+
+#section2{
+  background-color: #0798EC;
+}
+
+.hero {
+
+  &__content {
+    display: flex;
+    width: 100%;
+  }
+
+  &__text {
+    margin-top: 230px;
+    width: 50%;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 72px;
+    color: $titleColor;
+    margin-bottom: 60px;
+  }
+
+  &__description {
+    width: 450px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: $titleColor;
+  }
+
+  &__hint {
+    margin-top: 180px;
+    color: $secondaryColor;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+      font-size: 16px;
+    }
+
+    & svg {
+      position: relative;
+      top: 5px;
+      margin-right: 10px;
+    }
+  }
+
+  &__vector {
+
+    .vector {
+
+      &__main {
+        position: absolute;
+        top: 100px;
+        transition: all .8s;
+        cursor: default;
+        //&:hover {
+        //  transform: scale(1.1);
+        //}
+      }
+
+      &__column {
+        position: absolute;
+        top: 300px;
+        left: 230px;
+        z-index: 1;
+        animation: do-levitation 1.2s alternate ease-in-out infinite;
+      }
+
+      &__sim {
+          right: 25px;
+          position: absolute;
+          top: 290px;
+          z-index: 1;
+          animation: do-levitation 1.2s alternate ease-in-out infinite;
+      }
+
+      &__smile {
+        position: absolute;
+        right: -40px;
+        bottom: 309px;
+        z-index: 1;
+        animation: do-levitation 1.2s alternate ease-in-out infinite;
+      }
+
+      &__cloud--first {
+        position: absolute;
+        top: 165px;
+        left: 215px;
+        z-index: 1;
+        animation: do-levitation 1.2s alternate ease-in-out infinite;
+      }
+      &__cloud--second {
+        position: absolute;
+        top: 240px;
+        left: 270px;
+        z-index: 2;
+        animation: do-levitation 1s alternate ease-in-out infinite;
+      }
+      &__cloud--third {
+        position: absolute;
+        top: 200px;
+        left: 350px;
+        animation: do-levitation 1.2s alternate ease-in-out infinite;
+      }
+    }
+  }
+}
+
