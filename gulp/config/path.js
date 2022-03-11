@@ -12,7 +12,8 @@ export const path = {
 		html: `${buildFolder}/`,
 		images: `${buildFolder}/img/`,
 		fonts: `${buildFolder}/fonts/`,
-		files: `${buildFolder}/files/`
+		files: `${buildFolder}/files/`,
+    favicon: `${buildFolder}/favicon/`
 	},
 	src: {
 		js: `${srcFolder}/js/app.js`,
@@ -22,6 +23,7 @@ export const path = {
 		html: `${srcFolder}/*.html`, //.pug
 		files: `${srcFolder}/files/**/*.*`,
 		svgicons: `${srcFolder}/svgicons/*.svg`,
+    favicon: `${buildFolder}/favicon/*.{ico,png,webmanifest,xml}`
 	},
 	watch: {
 		js: `${srcFolder}/js/**/*.js`,

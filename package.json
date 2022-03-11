@@ -10,19 +10,22 @@
 		"zip": "gulp deployZIP --build",
 		"deploy": "gulp deployFTP --build",
 		"svgSprive": "gulp svgSpriteTask",
-        "test": "npm run eslint"
+		"test": "npm run eslint"
 	},
 	"author": "FLS",
 	"license": "ISC",
 	"dependencies": {
 		"gulp-cli": "^2.3.0"
 	},
-    "engines": {
-      "node": "16"
-    },
+	"engines": {
+		"node": "16"
+	},
 	"devDependencies": {
+		"@types/node": "^17.0.21",
 		"browser-sync": "latest",
 		"del": "latest",
+		"eslint": "7.32.0",
+		"eslint-config-htmlacademy": "5.0.0",
 		"gulp": "latest",
 		"gulp-autoprefixer": "latest",
 		"gulp-clean-css": "latest",
@@ -51,8 +54,6 @@
 		"vinyl-ftp": "latest",
 		"webp-converter": "2.2.3",
 		"webpack": "latest",
-		"webpack-stream": "latest",
-        "eslint": "7.32.0",
-        "eslint-config-htmlacademy": "5.0.0"
-    }
+		"webpack-stream": "latest"
+	}
 }
