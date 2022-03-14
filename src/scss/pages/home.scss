@@ -1,15 +1,6 @@
 .section {
   height: 100vh;
   width: 100%;
-  display: flex;
-}
-
-#section1{
-  background-color: #fff;
-}
-
-#section2{
-  background-color: #0798EC;
 }
 
 .hero {
@@ -17,6 +8,7 @@
   &__content {
     display: flex;
     width: 100%;
+    height: 100%;
   }
 
   &__text {
@@ -38,27 +30,6 @@
     font-size: 24px;
     line-height: 31px;
     color: $titleColor;
-  }
-
-  &__hint {
-    margin-top: 180px;
-    color: $secondaryColor;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    position: relative;
-    cursor: pointer;
-    transition: all .3s;
-
-    &:hover {
-      font-size: 16px;
-    }
-
-    & svg {
-      position: relative;
-      top: 5px;
-      margin-right: 10px;
-    }
   }
 
   &__vector {
@@ -94,7 +65,7 @@
       &__smile {
         position: absolute;
         right: -40px;
-        bottom: 309px;
+        top: 409px;
         z-index: 1;
         animation: do-levitation 1.2s alternate ease-in-out infinite;
       }
@@ -123,3 +94,228 @@
   }
 }
 
+.video {
+
+  &__content {
+    display: flex;
+    width: 100%;
+  }
+
+  &__description {
+    max-width: 542px;
+    background: #fff;
+    border: 2px solid $secondaryColor;
+    border-radius: 6px;
+    padding: 35px 25px;
+    height: 245px;
+    margin-top: 400px;
+    z-index: 10;
+
+    .description {
+
+      &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 40px;
+        color: $titleColor;
+        margin-bottom: 30px;
+      }
+
+      &__text {
+        max-width: 445px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        color: $titleColor;
+      }
+    }
+  }
+
+  &__link {
+    color: $secondaryColor;
+  }
+
+  &__vector {
+    width: 50%;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 110px;
+      left: -220px;
+    }
+  }
+}
+
+.about {
+
+  &__content {
+    width: 100%;
+    display: flex;
+  }
+
+  &__description {
+    max-width: 542px;
+    background: #fff;
+    border: 2px solid $secondaryColor;
+    border-radius: 6px;
+    padding: 35px 25px;
+    margin-top: 400px;
+    z-index: 10;
+
+    .description {
+
+      &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 40px;
+        color: $titleColor;
+        margin-bottom: 30px;
+      }
+
+      &__text {
+        max-width: 445px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        color: $titleColor;
+      }
+    }
+  }
+
+  &__link {
+
+  }
+
+  &__vector {
+    position: relative;
+
+    svg {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+.people {
+  position: relative;
+
+  &__block {
+    background-image: url('../img/desktop.svg');
+  }
+}
+
+.faq {
+
+  &__content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    width: 70%;
+    margin-top: 200px;
+
+    @media (min-width: 1440px) {
+      margin-top: 300px;
+    }
+
+    .text-block {
+
+      &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 50px;
+        color: $titleColor;
+        margin-bottom: 48px;
+      }
+
+      &__description {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        color: $titleColor;
+        margin-bottom: 24px;
+        max-width: 625px;
+      }
+
+      &__links {
+
+        .links {
+
+          &__item {
+            margin-bottom: 20px;
+          }
+
+          &__link {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: #101828;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: all .3s;
+
+            span {
+              display: block;
+              max-width: 530px;
+              margin-left: 10px;
+            }
+
+            svg {
+              stroke: #101828;
+              position: relative;
+              top: 2px;
+            }
+
+            &:hover {
+              color: $secondaryColor;
+              text-decoration: underline;
+            }
+
+            &:hover svg {
+              stroke: $secondaryColor;
+            }
+          }
+        }
+      }
+    }
+
+    .socials {
+      margin-top: 60px;
+
+      &__item {
+
+        &:not(:first-child) {
+          margin-left: 48px;
+        }
+
+        img {
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+
+  &__image {
+    width: 30%;
+
+    svg {
+      margin-top: 200px;
+      animation: do-levitation 1.8s alternate ease-in-out infinite;
+
+      &:hover {
+        transform: scale(1.1);
+        animation: none;
+      }
+
+      @media (min-width: 1440px) {
+        margin-top: 250px;
+      }
+    }
+  }
+}

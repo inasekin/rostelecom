@@ -33,8 +33,8 @@ body {
 
   // Скролл заблокирован
   .lock {
-    overflow: hidden;
     touch-action: none;
+    overflow: hidden;
   }
   // Сайт загружен
   .loaded & {
@@ -107,7 +107,7 @@ html {
 }
 
 //components
-
+@import "components/modals";
 
 //layout
 @import "layout/header";

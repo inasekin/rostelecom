@@ -14,3 +14,15 @@ export function isWebp() {
 		document.documentElement.classList.add(className);
 	});
 }
+
+export const openModal = (modal, overlay) => {
+	// document.body.classList.add('no-scroll');
+	overlay.classList.remove('hidden');
+	modal.classList.remove('hidden');
+}
+
+export const closeModal = (modal, overlay) => {
+	// document.body.classList.remove('no-scroll');
+	overlay.classList.add('hidden');
+	modal.classList.add('hidden');
+}
