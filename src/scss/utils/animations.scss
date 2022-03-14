@@ -6,3 +6,21 @@
     transform: translate(0, 0.5em);
   }
 }
+
+@keyframes do-levitation-big {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0.8em);
+  }
+}
+
+@keyframes do-levitation-small {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0.8em);
+  }
+}

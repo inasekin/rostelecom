@@ -25,7 +25,11 @@
   }
 
   &--video {
-    margin-top: 65px;
+    top: -250px;
+
+    @media (min-width: 1440px) {
+      top: -400px;
+    }
   }
 
   &--people {

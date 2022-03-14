@@ -100,10 +100,22 @@
 }
 
 .video {
+  height: 100%;
 
   &__content {
     display: flex;
     width: 100%;
+    height: 100%;
+
+    @media (min-width: 1440px) {
+      margin-top: 100px;
+    }
+  }
+
+  &__container {
+    height: 100%;
+    position: relative;
+    margin-top: 0;
   }
 
   &__description {
@@ -144,10 +156,42 @@
     width: 50%;
     position: relative;
 
-    svg {
-      position: absolute;
-      top: 110px;
-      left: -220px;
+    .vector-svg {
+      position: relative;
+
+      &__main {
+        position: absolute;
+        top: 110px;
+        left: -220px;
+      }
+
+      &__picture {
+        position: absolute;
+        left: 130px;
+        top: 145px;
+        animation: do-levitation 1.2s alternate ease-in-out infinite;
+      }
+
+      &__smile {
+        position: absolute;
+        right: -70px;
+        top: 200px;
+        animation: do-levitation 1.2s alternate ease-in-out infinite;
+      }
+
+      &__camera {
+        position: absolute;
+        right: -120px;
+        top: 390px;
+        animation: do-levitation-small 1.5s alternate ease-in-out infinite;
+      }
+
+      &__hearts {
+        position: absolute;
+        left: 80px;
+        top: 150px;
+        animation: do-levitation-big 1.8s alternate ease-in-out infinite;
+      }
     }
   }
 }
