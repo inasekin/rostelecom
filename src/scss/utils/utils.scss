@@ -4,6 +4,10 @@
   right: 130px;
 }
 
+.section.hero {
+  margin-top: 100px;
+}
+
 .hint {
   margin-top: 180px;
   color: $secondaryColor;
@@ -25,10 +29,11 @@
   }
 
   &--video {
-    top: -250px;
-
+    position: absolute;
+    bottom: 100px;
+    
     @media (min-width: 1440px) {
-      top: -400px;
+      
     }
   }
 

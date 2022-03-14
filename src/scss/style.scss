@@ -72,7 +72,7 @@ html {
   [class*="__container"] {
     @if ($maxWidthContainer>0) {
       max-width: rem($maxWidthContainer);
-      box-sizing: content-box;
+      box-sizing: border-box;
       margin: 0 auto;
     }
     @if ($containerPadding>0) {
@@ -85,7 +85,7 @@ html {
     margin: 0 auto;
     @if ($maxWidthContainer>0) {
       max-width: rem($maxWidthContainer);
-      box-sizing: content-box;
+      box-sizing: border-box;
     } @else {
       @if ($containerPadding>0) {
         padding: 0 rem(math.div($containerPadding, 2));
