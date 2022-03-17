@@ -30,11 +30,11 @@ export const fullPage = () => {
     // });
 
     window.addEventListener("wheel", event => {
-        if(event.deltaY > 0 && scrolling == false){
+        if(event.deltaY > 0 && scrolling === false){
             slideIndex++;
             restrictSlideIndex();
             showslide(slideIndex);
-        }else if (event.deltaY < 0 && scrolling == false){
+        }else if (event.deltaY < 0 && scrolling === false){
             slideIndex--;
             restrictSlideIndex();
             showslide(slideIndex);

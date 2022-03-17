@@ -4,6 +4,10 @@
   right: 130px;
 }
 
+.section_about.about {
+  height: 100%;
+}
+
 .section.hero {
   margin-top: 100px;
 }
@@ -43,6 +47,11 @@
     bottom: 15%;
     left: 15%;
     z-index: 10;
+  }
+
+  &--about {
+    position: absolute;
+    bottom: 77px;
   }
 }
 
