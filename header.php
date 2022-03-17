@@ -13,47 +13,35 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://hostingfortest.site/rostelecom/wp-content/themes/rostelecom/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://hostingfortest.site/rostelecom/wp-content/themes/rostelecom/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://hostingfortest.site/rostelecom/wp-content/themes/rostelecom/favicon/favicon-16x16.png">
+    <link rel="manifest" href="http://hostingfortest.site/rostelecom/wp-content/themes/rostelecom/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'rostelecom' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$rostelecom_description = get_bloginfo( 'description', 'display' );
-			if ( $rostelecom_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $rostelecom_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'rostelecom' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+<main>
+    <header class="header">
+        <div class="header__content __container">
+            <div class="header__logo logo">
+                <a href="#" class="logo__link">
+                    <svg width="229" height="58" viewBox="0 0 229 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M180.635 41.6846L188.602 50.6699H183.423L177.263 43.7457V50.6699H172.97V33.915H177.263V39.994L183.318 33.915H188.392L180.635 41.6846ZM52.2775 38.4425C55.4039 38.4425 56.8388 36.9603 56.8388 34.7256C56.8388 32.4908 55.4039 31.0087 52.2775 31.0087H46.0831V38.4425H52.2775ZM52.4175 27.0139C57.7954 27.0139 61.3417 29.7466 61.3417 34.714C61.3417 39.6814 57.7954 42.4141 52.4175 42.4141H46.0831V50.6584H41.5918V27.0139H52.4175ZM71.4792 47.1615C73.9989 47.1615 76.3437 45.3667 76.3437 42.2983C76.3437 39.2298 73.9989 37.4351 71.4792 37.4351C68.9594 37.4351 66.6146 39.2298 66.6146 42.2983C66.6146 45.3667 68.9594 47.1615 71.4792 47.1615ZM71.4792 33.4403C76.1104 33.4403 80.7067 36.4161 80.7067 42.2983C80.7067 48.1804 76.1104 51.1563 71.4792 51.1563C66.8479 51.1563 62.2516 48.1804 62.2516 42.2983C62.2516 36.4161 66.8479 33.4403 71.4792 33.4403ZM91.6607 47.1615C89.0709 47.1615 87.1694 45.3088 87.1694 42.2983C87.1694 39.3225 89.1409 37.4351 91.6607 37.4351C93.1889 37.4351 94.5188 38.1414 95.5804 39.7277L99.255 37.6319C98.0302 35.0266 95.3704 33.4403 91.6957 33.4403C86.9011 33.4403 82.8065 36.9603 82.8065 42.2983C82.8065 47.6362 86.6912 51.1563 91.6957 51.1563C95.3004 51.1563 97.7152 49.5352 99.4184 46.6636L95.872 44.7415C94.8571 46.1425 93.7722 47.1615 91.6607 47.1615ZM137.332 43.4099C137.122 45.9804 136.62 46.5478 135.733 46.5478C135.127 46.5478 134.847 46.4783 134.427 46.3741L134.45 50.7163C134.45 50.7163 134.987 50.8784 135.967 50.8784C139.606 50.8784 140.971 48.551 141.31 43.5836L141.718 37.7361H146.548V50.6468H150.84V33.915H138.043L137.332 43.4099ZM129.411 40.0635C129.002 37.9677 127.404 36.6824 125.024 36.6824C122.773 36.6824 121.07 38.1646 120.463 40.0635H129.411ZM125.164 33.4403C129.994 33.4403 133.4 36.9256 133.4 41.8235V43.3057H120.393C120.661 45.8762 122.505 47.4973 125.024 47.4973C127.311 47.4973 128.256 46.5131 129.317 45.2046L132.724 46.8952C131.021 49.7668 128.676 51.1563 124.966 51.1563C120.265 51.1563 116.287 47.6131 116.287 42.2983C116.275 36.9835 120.253 33.4403 125.164 33.4403ZM166.379 40.0635C165.971 37.9677 164.373 36.6824 161.993 36.6824C159.741 36.6824 158.038 38.1646 157.432 40.0635H166.379ZM162.133 33.4403C166.962 33.4403 170.369 36.9256 170.369 41.8235V43.3057H157.362C157.63 45.8762 159.473 47.4973 161.993 47.4973C164.279 47.4973 165.224 46.5131 166.286 45.2046L169.692 46.8952C167.989 49.7668 165.644 51.1563 161.935 51.1563C157.233 51.1563 153.255 47.6131 153.255 42.2983C153.244 36.9835 157.222 33.4403 162.133 33.4403ZM100.748 37.6319H105.788V50.6699H110.081V37.6319H115.12V33.915H100.748V37.6319ZM197.118 47.1615C199.638 47.1615 201.983 45.3667 201.983 42.2983C201.983 39.2298 199.638 37.4351 197.118 37.4351C194.598 37.4351 192.254 39.2298 192.254 42.2983C192.254 45.3667 194.598 47.1615 197.118 47.1615ZM197.118 33.4403C201.749 33.4403 206.346 36.4161 206.346 42.2983C206.346 48.1804 201.749 51.1563 197.118 51.1563C192.487 51.1563 187.891 48.1804 187.891 42.2983C187.891 36.4161 192.487 33.4403 197.118 33.4403ZM223.412 33.9035L218.758 45.6446L214.103 33.9035H208.492V50.6352H212.563V40.0404L217.078 50.6352H220.403L224.917 40.0404V50.6352H229V33.9035H223.412Z" fill="#101828"/>
+                        <path d="M27.8497 57.8952H4.05178C2.33693 57.8952 1.32202 56.3668 1.32202 55.0352C1.32202 54.2478 1.64866 53.5299 2.16195 53.0205L12.5444 42.7151L27.8497 57.8952Z" fill="#FF4F12"/>
+                        <path d="M4.05146 57.8953C2.25495 57.8953 0.00348613 56.4711 0.00348613 53.6342V21.8728C0.00348613 17.577 -0.218161 14.5665 2.87323 11.498L14.4572 0L35.0004 20.4255L2.16163 53.0205C1.63668 53.5416 1.3217 54.2479 1.3217 55.0353C1.3217 56.3669 2.33661 57.8953 4.05146 57.8953Z" fill="#7700FF"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="header__menu menu">
+                <div class="menu__item">Меню</div>
+            </div>
+        </div>
+    </header>

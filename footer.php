@@ -10,24 +10,15 @@
  */
 
 ?>
+    <div class="copyright">Copyright 2022</div>
+</main>
+<div class='video-modal hidden'>
+    <button class='video-modal__close'>&times;</button>
+    <video src="./files/video.mp4" controls="" width="100%"></video>
+</div>
+<div class='video-modal__overlay hidden'></div>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'rostelecom' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'rostelecom' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'rostelecom' ), 'rostelecom', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
+<script src="http://hostingfortest.site/rostelecom/wp-content/themes/rostelecom/js/app.min.js"></script>
 <?php wp_footer(); ?>
 
 </body>
