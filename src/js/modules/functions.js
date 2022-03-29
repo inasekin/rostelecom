@@ -26,3 +26,24 @@ export const closeModal = (modal, overlay) => {
 	overlay.classList.add('hidden');
 	modal.classList.add('hidden');
 }
+
+export const renderMenuFunctions = () => {
+	const menuItemOpen = document.querySelector('.menu__item');
+	const menuBurger = document.querySelector('.menu__burger');
+	const menuBurgerItems = document.querySelectorAll('.burger__item');
+
+	menuItemOpen.addEventListener('click', () => {
+		menuItemOpen.classList.add('hidden');
+		menuBurger.classList.remove('hidden');
+	});
+
+	for (let i = 0; i < menuBurgerItems.length; i++) {
+		menuBurgerItems[i].classList.remove('active');
+		menuBurgerItems[i].addEventListener('click', (evt) => {
+			evt.preventDefault();
+			menuItemOpen.classList.remove('hidden');
+			menuBurger.classList.add('hidden');
+			menuBurgerItems[i].classList.add('active');
+		})
+	}
+}

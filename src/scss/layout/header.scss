@@ -45,6 +45,52 @@
           left: -16px;
         }
       }
+
+      &__burger {
+
+        display: flex;
+        flex-direction: column;
+
+        &.burger {
+          position: relative;
+
+          &::after {
+            content: '';
+            display: block;
+            height: 100%;
+            background: $secondaryColor;
+            width: 1px;
+            position: absolute;
+            left: -16px;
+          }
+        }
+
+        .burger {
+          &__item {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 18px;
+            color: #000;
+            &:not(:first-child) {
+              margin-top: 7px;
+            }
+
+            &.active {
+
+              &::before {
+                content: "";
+                display: block;
+                width: 5px;
+                height: 19px;
+                background-color: #FF4F12;
+                position: absolute;
+                top: -2px;
+                left: -16px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
