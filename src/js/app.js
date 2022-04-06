@@ -4,7 +4,7 @@ import {renderModals} from "./modules/modals.js";
 import {renderMenuFunctions} from "./modules/functions.js";
 import {renderAnimations} from "./modules/animations.js";
 
-fullPage();
+// fullPage();
 flsFunctions.isWebp();
 renderModals();
 renderMenuFunctions();
