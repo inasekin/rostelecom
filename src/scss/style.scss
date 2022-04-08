@@ -21,15 +21,18 @@ $mobileSmall: em(479.98); // Телефоны S
 @import "base/null";
 //utils
 @import "utils/utils";
-
-//utils
-@import "utils/utils";
+@import "utils/swiper";
+@import "utils/tooltip";
 @import "utils/animations";
 
 body {
   font-family: $fontFamily;
   font-weight: 400;
   overflow-x: hidden;
+
+  @media (max-width: 900px) {
+    overflow: auto !important;
+  }
 
   // Скролл заблокирован
   .lock {
@@ -105,6 +108,9 @@ body {
 //components
 @import "components/modals";
 
+//blocks
+@import "blocks/style";
+
 //layout
 @import "layout/header";
 
@@ -115,3 +121,4 @@ body {
 
 //vendors
 @import "vendors/animate";
+@import "vendors/jquery.pagepiling.min";

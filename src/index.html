@@ -5,8 +5,8 @@
 	})
 	<body>
 		@@include('html/header.html',{})
-		<main id="fullpage">
-			<section class="section hero">
+		<main id="pagepiling">
+			<section id="section1" class="section hero">
 				<div class="hero__content __container">
 					<div class="hero__text">
 						<div class="hero__title">
@@ -217,7 +217,7 @@
 				</div>
 			</section>
 
-			<section class="section">
+			<section  id="section2" class="section">
 				<div class="section__video video">
 					<div class="video__container">
 						<div class="video__content">
@@ -255,7 +255,7 @@
 				</div>
 			</section>
 
-			<section class="section">
+			<section id="section3" class="section">
 				<div class="section_about about">
 					<div class="about__container">
 						<div class="about__content">
@@ -285,123 +285,18 @@
 				</div>
 			</section>
 
-			<section class="section people">
-				<div class="people__map"></div>
-<!--				<div class="hint hint&#45;&#45;people">-->
-<!--					<svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--						<line x1="6.03745" y1="2.84124e-08" x2="6.03745" y2="16.8034" stroke="#FF4F12" stroke-width="1.3"/>-->
-<!--						<path d="M10.7997 12.1007L5.8999 17.0005L1.0001 12.1007" stroke="#FF4F12" stroke-width="1.3"/>-->
-<!--					</svg>-->
-<!--					Скроллим дальше-->
-<!--				</div>-->
-			</section>
+			@@include('html/humans.html', {})
 
-			<section class="section homes">
-				<div class="homes__map"></div>
-			</section>
+			@@include('html/streets.html', {})
 
-			<section class="section apartment">
-				<div class="apartment__picture"></div>
-			</section>
+			@@include('html/interior_home.html', {})
 
-			<section class="section cafe">
-				<div class="cafe__picture"></div>
-			</section>
+			@@include('html/interior_public.html', {})
 
-			<section class="section town">
-				<div class="town__picture"></div>
-			</section>
+			@@include('html/town.html', {})
 
-			<section class="section faq">
-				<div class="faq__content __container">
-					<div class="faq__text text-block">
-                        <div class="text-block__title">
-                            Полезные ссылки
-                        </div>
-                        <div class="text-block__description">
-                            Ознакомьтесь с дополнительными материалами о Ростелекомеи узнайте больше о проектах, ценностях и культуре компании.
-                        </div>
-                        <div class="text-block__links links">
-                            <ul class="links__list">
-                                <li class="links__item">
-                                    <a href="#" class="links__link">
-                                        Карьерный сайт Ростелеком
-                                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <line y1="5.7626" x2="16.8034" y2="5.7626" stroke-width="1.3"/>
-                                            <path d="M12.1007 1.0001L17.0005 5.8999L12.1007 10.7997"  stroke-width="1.3"/>
-                                        </svg>
-                                    </a>
-									<span>
-                                            Программирование и разработка цифровых продуктов, инструменты IT-команд, техническая архитектура проектов.
-                                        </span>
-                                </li>
-                                <li class="links__item">
-                                    <a href="#" class="links__link">
-                                        Блог Ростелекома на VC
-                                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <line y1="5.7626" x2="16.8034" y2="5.7626" stroke-width="1.3"/>
-                                            <path d="M12.1007 1.0001L17.0005 5.8999L12.1007 10.7997"  stroke-width="1.3"/>
-                                        </svg>
-                                    </a>
-									<span>
-                                            Программирование и разработка цифровых продуктов, инструменты IT-команд, техническая архитектура проектов.
-                                        </span>
-                                </li>
-                                <li class="links__item">
-                                    <a href="#" class="links__link">
-                                        Блог на Хабре
-                                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <line y1="5.7626" x2="16.8034" y2="5.7626" stroke-width="1.3"/>
-                                            <path d="M12.1007 1.0001L17.0005 5.8999L12.1007 10.7997"  stroke-width="1.3"/>
-                                        </svg>
-                                    </a>
-									<span>
-                                            Программирование и разработка цифровых продуктов, инструменты IT-команд, техническая архитектура проектов.
-                                        </span>
-                                </li>
-                                <li class="links__item">
-                                    <a href="#" class="links__link">
-                                        ВКонтакте (карьерный)
-                                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <line y1="5.7626" x2="16.8034" y2="5.7626" stroke-width="1.3"/>
-                                            <path d="M12.1007 1.0001L17.0005 5.8999L12.1007 10.7997"  stroke-width="1.3"/>
-                                        </svg>
-                                    </a>
-									<span>
-                                            Программирование и разработка цифровых продуктов, инструменты IT-команд, техническая архитектура проектов.
-                                        </span>
-                                </li>
-                                <li class="links__item">
-                                    <a href="#" class="links__link">
-                                        Ежегодная национальная премия «Ростелеком»
-                                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <line y1="5.7626" x2="16.8034" y2="5.7626" stroke-width="1.3"/>
-                                            <path d="M12.1007 1.0001L17.0005 5.8999L12.1007 10.7997"  stroke-width="1.3"/>
-                                        </svg>
-                                    </a>
-									<span>
-                                            Самые масштабные и инновационные проекты Ростелекома и его партнёров
-                                        </span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="socials">
-                            <a href="#" class="socials__item">
-                                <img src="./img/twit.svg" alt="">
-                            </a>
-                            <a href="#" class="socials__item">
-                                <img src="./img/twit.svg" alt="">
-                            </a>
-                            <a href="#" class="socials__item">
-                                <img src="./img/twit.svg" alt="">
-                            </a>
-                        </div>
-					</div>
-					<div class="faq__image">
-						<img src="./img/faq.svg" alt="">
-                    </div>
-				</div>
-			</section>
+			@@include('html/faq.html', {})
+
 		</main>
 		<div class='video-modal hidden'>
 			<button class='video-modal__close'>&times;</button>
@@ -409,6 +304,27 @@
 		</div>
 		<div class='video-modal__overlay hidden'></div>
 		@@include('html/footer.html',{})
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.js" integrity="sha512-FcXc9c211aHVJEHxoj2fNFeT8+wUESf/4mUDIR7c31ccLF3Y6m+n+Wsoq4dp2sCnEEDVmjhuXX6TfYNJO6AG6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script>
+			const screenWidth = window.innerWidth;
+
+			console.log(screenWidth);
+
+			if (900 < screenWidth) {
+				$(document).ready(function() {
+					$('#pagepiling').pagepiling();
+				});
+
+				const hintBtn = document.querySelectorAll('.hint');
+
+				for (let i = 0; i < hintBtn.length; i++) {
+					hintBtn[i].addEventListener('click', () => {
+						$.fn.pagepiling.moveSectionDown();
+					});
+				}
+			}
+		</script>
 		<script src="js/app.min.js"></script>
 	</body>
 </html>
