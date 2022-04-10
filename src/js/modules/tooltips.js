@@ -18,6 +18,8 @@ PointCircle.forEach((frame, idx) => {
 
     frame.forEach((circle) => {
         const button = document.querySelector(`#button-point-${circle.id}`);
+        const pulse = document.querySelector(`#circle-pulse-${circle.id}`);
+
         button.addEventListener("click", (e) => {
             clearAttr();
             const offset = circle.position === 'right-top' ? [-115, 100] : circle.position === 'left-bottom' ? [125, 100] : circle.position === 'left-top' ? [-250, 100] : [100, 100];
@@ -47,6 +49,7 @@ PointCircle.forEach((frame, idx) => {
             close.addEventListener('click', () => {
                 tooltip.removeAttribute('data-show');
                 button.removeAttribute('data-show');
+                pulse.setAttribute('data-show', '');
                 if (active) active.removeAttribute('data-show');
                 // Disable the event listeners
                 popperInstance.setOptions((options) => ({
@@ -63,6 +66,7 @@ PointCircle.forEach((frame, idx) => {
                     // Make the tooltip visible
                     tooltip.setAttribute('data-show', '');
                     button.setAttribute('data-show', '');
+                    pulse.removeAttribute('data-show');
                     if (active) active.setAttribute('data-show', '');
 
                     // Enable the event listeners
