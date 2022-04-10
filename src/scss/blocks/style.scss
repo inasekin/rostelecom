@@ -15,6 +15,10 @@
       width: 100vw;
       height: 100vh;
     }
+
+    @media (max-width: 900px) {
+      display: none;
+    }
   }
 
   &.interior_home_desktop {
@@ -51,6 +55,17 @@
     opacity: 1;
     transition: 1s;
   }
+}
+
+.pulse {
+  margin:100px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #cca92c;
+  cursor: pointer;
+  animation: pulse 2s infinite;
 }
 
 .circle-button {

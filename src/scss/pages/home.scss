@@ -1,5 +1,6 @@
 .section {
   background-color: #fff;
+  height: 100vh;
 }
 
 .hero {
@@ -36,6 +37,10 @@
   }
 
   &__vector {
+
+    @media (max-width: 900px) {
+      display: none;
+    }
 
     .vector {
 
@@ -154,6 +159,10 @@
     width: 50%;
     position: relative;
 
+    @media (max-width: 900px) {
+      display: none;
+    }
+
     .vector-svg {
       position: relative;
 
@@ -255,6 +264,10 @@
   &__vector {
     position: relative;
     width: 100%;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
 
     .about-vectors {
 
@@ -483,9 +496,13 @@
       @media (min-width: 1440px) {
         margin-top: 250px;
       }
+
+      @media (max-width: 900px) {
+        margin-top: 20px;
+      }
     }
   }
-  @media (max-width: 576px) {
+  @media (max-width: 900px) {
 
     .faq {
 
@@ -523,7 +540,7 @@
 
       &__image {
         width: 300px;
-        z-index: -1;
+        z-index: 2;
       }
 
       &__image img {

@@ -6,7 +6,7 @@ const swiper = new Swiper('.swiper', {
     modules: [Navigation, Pagination],
     // Optional parameters
     spaceBetween: 5,
-    slidesPerView: 'auto',
+    slidesPerView: 1,
     centeredSlides: true,
     autoplay: {
         delay: 2500,
