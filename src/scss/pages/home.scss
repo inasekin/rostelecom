@@ -1,7 +1,7 @@
-.section {
-  background-color: #fff;
-  height: 100vh;
-}
+//.section {
+//  background-color: #fff;
+//  height: 100vh;
+//}
 
 .hero {
 
@@ -9,6 +9,24 @@
     display: flex;
     width: 100%;
     height: 100%;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
+  }
+  &__image {
+    &--mobile {
+      display: none;
+
+      @media (max-width: 900px) {
+        display: block;
+      }
+
+      img {
+        position: relative;
+        left: -50px;
+      }
+    }
   }
 
   &__text {
@@ -18,6 +36,15 @@
     @media  (min-width: 1442px) {
       margin-top: 330px;
     }
+
+    @media (max-width: 900px) {
+      width: 100%;
+      border: 2px solid #FF4F12;
+      height: max-content;
+      border-radius: 6px;
+      padding: 14px 16px;
+      margin-top: 50px;
+    }
   }
 
   &__title {
@@ -26,6 +53,13 @@
     line-height: 72px;
     color: $titleColor;
     margin-bottom: 60px;
+
+    @media (max-width: 900px) {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 12px;
+    }
   }
 
   &__description {
@@ -34,6 +68,13 @@
     font-size: 24px;
     line-height: 31px;
     color: $titleColor;
+
+    @media (max-width: 900px) {
+      width: 100%;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__vector {
@@ -410,6 +451,7 @@
         color: $titleColor;
         margin-bottom: 24px;
         max-width: 625px;
+
       }
 
       &__hint {

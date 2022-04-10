@@ -33,10 +33,9 @@
 		@@include('html/footer.html',{})
 		<script>
 			if (window.innerWidth > 900) {
-				new fullpage("#fullpage", {
-					sectionSelector: '.vertical-scrolling',
-					navigation: true,
-					parallax: true,
+				new fullpage('#fullpage', {
+					css3: true,
+					scrollOverflow: true,
 				});
 			}
 		</script>
