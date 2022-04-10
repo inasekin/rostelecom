@@ -12,7 +12,7 @@ PointCircle.forEach((frame, idx) => {
         const button = document.querySelector(`#button-point-${circle.id}`);
         button.addEventListener("click", (e) => {
             clearAttr();
-            const offset = circle.position === 'right-top' ? [-115, 100] : circle.position === 'left-bottom' ? [150, 100] : circle.position === 'left-top' ? [-250, 100] : [100, 100];
+            const offset = circle.position === 'right-top' ? [-115, 100] : circle.position === 'left-bottom' ? [125, 100] : circle.position === 'left-top' ? [-250, 100] : [100, 100];
             const active = circle.activeSvg ? document.querySelector(circle.activeSvg) : undefined;
             header.textContent = circle.header;
             body.textContent = circle.body;
