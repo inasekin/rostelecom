@@ -1,5 +1,6 @@
 .section {
   &.humans_desktop {
+    position: relative;
     & > svg {
       width: 100vw;
       height: 100vh;
@@ -11,6 +12,7 @@
   }
 
   &.streets_desktop {
+    position: relative;
     & > svg {
       width: 100vw;
       height: 100vh;
@@ -22,6 +24,7 @@
   }
 
   &.interior_home_desktop {
+    position: relative;
     & > svg {
       width: 100vw;
       height: 100vh;
@@ -34,6 +37,7 @@
   }
 
   &.public_home_desktop {
+    position: relative;
     & > svg {
       width: 100vw;
       height: 100vh;
@@ -44,6 +48,15 @@
       display: none;
     }
   }
+}
+
+.textProjects {
+  display: inline-block;
+  position: absolute;
+  bottom: 120px;
+  left: 150px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #active-man {

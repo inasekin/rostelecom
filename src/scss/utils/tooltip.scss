@@ -1,4 +1,4 @@
-.tooltip {
+.tooltip, .tooltip-main {
   padding: 17px 19px;
   background: white;
   color: black;
@@ -7,7 +7,7 @@
   font-weight: bold;
   font-size: 13px;
   z-index: 10;
-  max-width: 350px;
+  width: 350px;
   max-height: 150px;
 
   .tooltip-header {
@@ -39,6 +39,77 @@
     cursor: pointer;
   }
   display: none;
+}
+
+.tooltip-main {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  left: 150px;
+  bottom: 150px;
+  width: 540px;
+  max-height: initial;
+
+  //animation: autoHide 1.0s forwards;
+  //animation-iteration-count: 1;
+  //animation-delay: 5s;
+
+  &[tooltip-hide] {
+    animation: closeHide 1s forwards;
+    animation-iteration-count: 1;
+    animation-delay: .3s;
+  }
+
+  .tooltip-header {
+    font-size: 36px;
+  }
+
+  .tooltip-body {
+    font-size: 20px;
+    font-weight: 300;
+    height: initial;
+    overflow: hidden;
+  }
+}
+
+@-webkit-keyframes autoHide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: -1000px;
+  }
+}
+@keyframes autoHide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: -1000px;
+  }
+}
+
+@-webkit-keyframes closeHide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: -1000px;
+  }
+}
+@keyframes closeHide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: -1000px;
+  }
 }
 
 .tooltip[data-show] {
