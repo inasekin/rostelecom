@@ -15,13 +15,16 @@ PointCircle.forEach((frame, idx) => {
     const body = document.querySelector(`#tooltip-body-${index}`);
     const tooltip = document.querySelector(`#tooltip-${index}`);
     const close = document.querySelector(`#tooltip-close-${index}`);
+    console.log('frame', frame)
 
     frame.forEach((circle) => {
         const button = document.querySelector(`#button-point-${circle.id}`);
         const pulse = document.querySelector(`#circle-pulse-${circle.id}`);
+        // console.log('circle', circle)
 
         button.addEventListener("click", (e) => {
             clearAttr();
+            console.log('circle', e)
             const offset = circle.position === 'right-top' ? [-115, 100] : circle.position === 'left-bottom' ? [125, 100] : circle.position === 'left-top' ? [-250, 100] : [100, 100];
             const active = circle.activeSvg ? document.querySelector(circle.activeSvg) : undefined;
             header.textContent = circle.header;
@@ -90,11 +93,11 @@ function clearAttr() {
     PointCircle.forEach((f, i) => {
         const index = i + 1;
         const tooltip = document.querySelector(`#tooltip-${index}`);
-        tooltip.removeAttribute('data-show');
+        if(!!tooltip.getAttribute('data-show')) tooltip.removeAttribute('data-show');
         f.forEach((e) => {
             const b = document.querySelector(`#button-point-${e.id}`);
             const a = e.activeSvg ? document.querySelector(e.activeSvg) : undefined;
-            b.removeAttribute('data-show');
+            if(!!b.getAttribute('data-show')) b.removeAttribute('data-show');
             if (a) a.removeAttribute('data-show');
         })
     })
