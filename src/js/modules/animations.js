@@ -45,6 +45,6 @@ export const renderAnimations = () => {
 
             clearInterval(interval);
         }
-    }, 500);
+    }, 300);
 
 }

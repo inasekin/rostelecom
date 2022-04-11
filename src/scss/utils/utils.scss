@@ -6,6 +6,10 @@
 
 .section_about.about {
   height: 100vh;
+
+  @media (max-width: 950px) {
+    height: 100%;
+  }
 }
 
 .hint {
@@ -56,6 +60,10 @@
   &--about {
     position: absolute;
     bottom: 77px;
+
+    @media (max-width: 950px) {
+      display: none;
+    }
   }
 }
 
@@ -75,6 +83,10 @@
 
 @media (max-height: 850px) {
   #section2 {
+    overflow: hidden;
+  }
+
+  #section3 {
     overflow: hidden;
   }
 }
