@@ -16,14 +16,9 @@ const swiper = new Swiper();
 */
 
 const button = document.querySelectorAll(".town__circle-button");
-
 const round = document.querySelectorAll(".town__round");
-
 const modal = document.querySelectorAll(".town-modal");
-
 const modalButton = document.querySelectorAll(".town-modal__button");
-
-
 
 button[0].addEventListener( "click" , () => {
     round[0].classList.toggle("hidden");
