@@ -81,6 +81,10 @@
   min-height: 100%;
 }
 
+.description-streets {
+  position: absolute;
+}
+
 @media (max-height: 850px) {
   #section2 {
     overflow: hidden;
