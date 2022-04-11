@@ -2,8 +2,7 @@
   &.humans_desktop {
     position: relative;
     & > svg {
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
     }
 
     @media (max-width: 900px) {
@@ -14,8 +13,7 @@
   &.streets_desktop {
     position: relative;
     & > svg {
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
     }
 
     @media (max-width: 900px) {
@@ -25,10 +23,13 @@
 
   &.interior_home_desktop {
     position: relative;
+    width: 90%;
     & > svg {
-      width: 100vw;
-      height: 100vh;
+      width: 85%;
+      margin: 0 auto;
+      max-height: 100vh;
     }
+
     padding-bottom: 100px;
 
     @media (max-width: 900px) {
@@ -39,9 +40,9 @@
   &.public_home_desktop {
     position: relative;
     & > svg {
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
     }
+
     padding-bottom: 100px;
 
     @media (max-width: 900px) {
@@ -59,12 +60,12 @@
   font-weight: bold;
 }
 
-#active-man {
-  //display: none;
+.active-map {
+  display: none;
   opacity: 0;
   transition: 1s;
   &[data-show] {
-    //display: block;
+    display: block;
     opacity: 1;
     transition: 1s;
   }
