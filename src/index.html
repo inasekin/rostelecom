@@ -41,30 +41,30 @@
 		</div>
 		<div class='video-modal__overlay hidden'></div>
 		@@include('html/footer.html',{})
-		<script>
-			if (window.innerWidth > 900) {
+<!--		<script>-->
+<!--			if (window.innerWidth > 900) {-->
 
-				new fullpage('#fullpage', {
-					css3: true,
-					licenseKey: "8C1E5DF4-7F4D49D3-A6D052DA-914431C0",
-					fitToSection: true,
-					lazyLoading: true,
-					observer: true,
-					normalScrollElements: '.tooltip-body',
-					keyboardScrolling: true,
-					touchSensitivity: 15,
-					scrollingSpeed: 800,
-				});
+<!--				new fullpage('#fullpage', {-->
+<!--					css3: true,-->
+<!--					licenseKey: "8C1E5DF4-7F4D49D3-A6D052DA-914431C0",-->
+<!--					fitToSection: true,-->
+<!--					lazyLoading: true,-->
+<!--					observer: true,-->
+<!--					normalScrollElements: '.tooltip-body',-->
+<!--					keyboardScrolling: true,-->
+<!--					touchSensitivity: 15,-->
+<!--					scrollingSpeed: 800,-->
+<!--				});-->
 
-				const hintsBtns = document.querySelectorAll('.hint');
+<!--				const hintsBtns = document.querySelectorAll('.hint');-->
 
-				for (let i = 0; i < hintsBtns.length; i++) {
-					hintsBtns[i].addEventListener('click', () => {
-						fullpage_api.moveSectionDown();
-					})
-				}
-			}
-		</script>
+<!--				for (let i = 0; i < hintsBtns.length; i++) {-->
+<!--					hintsBtns[i].addEventListener('click', () => {-->
+<!--						fullpage_api.moveSectionDown();-->
+<!--					})-->
+<!--				}-->
+<!--			}-->
+<!--		</script>-->
 		<script src="js/app.min.js"></script>
 	</body>
 </html>
