@@ -33,7 +33,6 @@ export const renderAnimations = () => {
 
         if (activeSectionIndex.index === 1) {
             clearInterval();
-            console.log(123)
             gsap.timeline({
                 scrollTrigger: {
                     trigger: "#section2",
