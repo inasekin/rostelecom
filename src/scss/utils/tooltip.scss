@@ -1,5 +1,6 @@
 .tooltip, .tooltip-main {
-  padding: 17px 19px;
+  padding: 34px 30px;
+  position: relative;
   background: white;
   color: black;
   border: 2px solid rgb(255, 79, 18);
@@ -64,6 +65,13 @@
 
   .tooltip-header {
     font-size: 36px;
+    position: absolute;
+    top: 10px;
+    right: 13px;
+
+    span {
+      display: block;
+    }
   }
 
   .tooltip-body {
