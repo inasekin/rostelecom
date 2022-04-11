@@ -1,8 +1,14 @@
+@import "interior_home";
+@import "interior_office";
+
 .section {
   &.humans_desktop {
     position: relative;
     & > svg {
-      width: 100%;
+      width: 122%;
+      left: -22%;
+      position: relative;
+      max-height: 100vh;
     }
 
     @media (max-width: 900px) {
