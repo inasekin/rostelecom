@@ -34,10 +34,14 @@
 
   &--video {
     position: absolute;
-    bottom: 180px;
+    bottom: -80px;
     
     @media (min-width: 1440px) {
       
+    }
+
+    @media (max-width: 900px) {
+      display: none;
     }
   }
 
@@ -67,4 +71,10 @@
 .fp-tableCell {
   height: auto !important;
   min-height: 100%;
+}
+
+@media (max-height: 850px) {
+  #section2 {
+    overflow: hidden;
+  }
 }

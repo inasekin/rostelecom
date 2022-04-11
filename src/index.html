@@ -27,7 +27,7 @@
 		</main>
 		<div class='video-modal hidden'>
 			<button class='video-modal__close'>&times;</button>
-			<video src="./files/video.mp4" controls="" width="100%"></video>
+			<iframe width="100%" height="600" src="https://rutube.ru/play/embed/484d69feb4d37944efe259a3c9c9f404" frameBorder="0" allow="clipboard-write" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 		</div>
 		<div class='video-modal__overlay hidden'></div>
 		@@include('html/footer.html',{})
@@ -35,8 +35,15 @@
 			if (window.innerWidth > 900) {
 				new fullpage('#fullpage', {
 					css3: true,
-					scrollOverflow: true,
 				});
+
+				const hintsBtns = document.querySelectorAll('.hint');
+
+				for (let i = 0; i < hintsBtns.length; i++) {
+					hintsBtns[i].addEventListener('click', () => {
+						fullpage_api.moveSectionDown();
+					})
+				}
 			}
 		</script>
 		<script src="js/app.min.js"></script>
