@@ -163,16 +163,16 @@
     position: absolute;
     height: 2px;
     width: 100px;
-    top: -12px;
+    top: -7px;
     left: 2px;
   }
 
   &::after {
     position: absolute;
     left: 100px;
-    top: -12px;
+    top: -5px;
     width: 2px;
-    height: 115px;
+    height: 110px;
   }
 }
 
@@ -182,16 +182,16 @@
     position: absolute;
     height: 2px;
     width: 280px;
-    top: -60px;
+    top: -53px;
     left: -180px;
   }
 
   &::after {
     position: absolute;
     left: -180px;
-    top: -60px;
+    top: -53px;
     width: 2px;
-    height: 60px;
+    height: 53px;
   }
 }
 
@@ -201,9 +201,8 @@
     position: absolute;
     height: 2px;
     width: 280px;
-    top: 48px;
+    top: 42px;
     left: -105px;
-    //transform: rotate(90deg);
   }
 
   &::after {
@@ -211,6 +210,6 @@
     left: 175px;
     top: 1px;
     width: 2px;
-    height: 49px;
+    height: 43px;
   }
 }

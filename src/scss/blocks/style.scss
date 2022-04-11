@@ -3,14 +3,12 @@
 @import "interior_public";
 
 .section {
-  &.humans_desktop {
+  width: 100%;
+  #interior_office {
     position: relative;
-    & > svg {
-      width: 122%;
-      left: -22%;
-      position: relative;
-      max-height: 100vh;
-    }
+    width: 125%;
+    left: -25%;
+    max-height: 100vh;
 
     @media (max-width: 900px) {
       display: none;
@@ -28,14 +26,12 @@
     }
   }
 
-  &.interior_home_desktop {
+  #interior_home {
     position: relative;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
-    & > svg {
-      width: 100%;
-      max-height: 100vh;
-    }
+    display: block;
+    max-height: 100vh;
 
     //padding-bottom: 100px;
 
@@ -44,16 +40,15 @@
     }
   }
 
-  &.interior_public_desktop {
+  #interior_public {
     position: relative;
-    & > svg {
-      width: 135%;
-      left: -25%;
-      //height: 100vh;
+    width: 120%;
+    left: -20%;
+    //top: -15%;
+    //height: 100vh;
 
-      position: relative;
+
       //max-height: 100vh;
-    }
 
     //padding-bottom: 100px;
 
@@ -63,6 +58,11 @@
   }
 }
 
+.wrapper-map {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 .textProjects {
   display: inline-block;
   position: absolute;
@@ -70,6 +70,7 @@
   left: 150px;
   font-size: 20px;
   font-weight: bold;
+  z-index: 999;
 }
 
 .active-map {
