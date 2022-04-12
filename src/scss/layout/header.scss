@@ -34,6 +34,10 @@
     margin-right: 120px;
 
     @media (max-width: 768px) {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
       margin-right: 0;
     }
 
@@ -98,7 +102,7 @@
                 height: 19px;
                 background-color: #FF4F12;
                 position: absolute;
-                top: -2px;
+                top: auto;
                 left: -16px;
               }
             }

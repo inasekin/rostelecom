@@ -1,7 +1,7 @@
 import { PointCircle } from "../data.js";
 import {createPopper} from "@popperjs/core";
 
-[...Array(4)].forEach((_, id) => {
+[...Array(5)].forEach((_, id) => {
     const close = document.querySelector(`#tooltip-close-main-${id + 1}`);
     const tooltip = document.querySelector(`#tooltip-main-${id + 1}`);
     close.addEventListener("click", () => {

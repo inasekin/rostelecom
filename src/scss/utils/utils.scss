@@ -89,14 +89,14 @@
   .swiper {
     height: 660px;
   }
+
+  .textProjects {
+    display: none !important;
+  }
 }
 
 @media (max-height: 850px) {
   .tooltip-main {
-    display: none !important;
-  }
-
-  .textProjects {
     display: none !important;
   }
 

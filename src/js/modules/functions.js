@@ -38,12 +38,16 @@ export const renderMenuFunctions = () => {
 	});
 
 	for (let i = 0; i < menuBurgerItems.length; i++) {
-		menuBurgerItems[i].classList.remove('active');
-		menuBurgerItems[i].addEventListener('click', (evt) => {
-			evt.preventDefault();
+		menuBurgerItems[i].addEventListener('click', () => {
+
+			if (!menuBurgerItems[i].classList.contains('active')) {
+				menuItemOpen.textContent = menuBurgerItems[i].textContent;
+			}
+
 			menuItemOpen.classList.remove('hidden');
 			menuBurger.classList.add('hidden');
-			menuBurgerItems[i].classList.add('active');
 		})
 	}
+
+
 }

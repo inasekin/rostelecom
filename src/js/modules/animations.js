@@ -28,22 +28,24 @@ export const renderAnimations = () => {
         }
     }).from(".vector__main", { y: innerHeight * 1.5 });
 
-    interval = setInterval(() => {
-        activeSectionIndex = fullpage_api.getActiveSection();
+    if (window.innerWidth > 900) {
+        interval = setInterval(() => {
+            activeSectionIndex = fullpage_api.getActiveSection();
 
-        if (activeSectionIndex.index === 1) {
-            clearInterval();
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: "#section2",
-                    start: "top top",
-                    end: "bottom bottom",
-                    scrub: true
-                }
-            }).from(".vector-svg__main", { y: -innerHeight * 1.5 });
+            if (activeSectionIndex.index === 1) {
+                clearInterval();
+                gsap.timeline({
+                    scrollTrigger: {
+                        trigger: "#section2",
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: true
+                    }
+                }).from(".vector-svg__main", { y: -innerHeight * 1.5 });
 
-            clearInterval(interval);
-        }
-    }, 300);
+                clearInterval(interval);
+            }
+        }, 300);
+    }
 
 }

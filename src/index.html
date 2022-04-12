@@ -15,7 +15,6 @@
 			<!-- Готово -->
 
 			<!-- Почти готово -->
-			<!-- TODO: сделать анимация перехода на след экран -->
 			@@include('html/about_block.html', {})
 			<!-- Почти готово -->
 
@@ -49,6 +48,8 @@
 
 				new fullpage('#fullpage', {
 					css3: true,
+					anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+					menu: '#myMenu',
 					licenseKey: "8C1E5DF4-7F4D49D3-A6D052DA-914431C0",
 					fitToSection: true,
 					lazyLoading: true,
