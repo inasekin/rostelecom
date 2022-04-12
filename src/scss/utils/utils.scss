@@ -85,7 +85,21 @@
   position: absolute;
 }
 
+@media (max-width: 768px) {
+  .swiper {
+    height: 660px;
+  }
+}
+
 @media (max-height: 850px) {
+  .tooltip-main {
+    display: none !important;
+  }
+
+  .textProjects {
+    display: none !important;
+  }
+
   #section2 {
     overflow: hidden;
   }

@@ -8,6 +8,10 @@
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+
+    @media (max-width: 768px) {
+      margin-top: 17px;
+    }
   }
 
   &__logo {
@@ -16,12 +20,22 @@
 
       &__link {
 
+        svg {
+          @media (max-width: 768px) {
+            width: 116px;
+            height: 30px;
+          }
+        }
       }
     }
   }
 
   &__menu {
     margin-right: 120px;
+
+    @media (max-width: 768px) {
+      margin-right: 0;
+    }
 
     .menu {
 
