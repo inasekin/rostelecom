@@ -26,6 +26,10 @@
     margin-top: 12px;
   }
 
+  @media (max-height: 790px) {
+    margin-top: 80px;
+  }
+
   &:hover {
     font-size: 16px;
   }
@@ -130,5 +134,14 @@
 
   #section3 {
     overflow: hidden;
+  }
+}
+#section8 {
+  height: 100vh !important;
+}
+
+@media (max-height: 790px) {
+  .about__description.description.description-streets {
+    margin-top: 300px;
   }
 }

@@ -228,6 +228,10 @@
     margin-top: 400px;
     z-index: 10;
 
+    @media (max-height: 790px) {
+      margin-top: 250px !important;
+    }
+
     @media (max-width: 1440px) {
       margin-top: 350px;
     }
@@ -588,9 +592,12 @@
     margin-top: 200px;
     margin-bottom: 60px;
 
-
     @media (min-width: 1440px) {
       margin-top: 150px;
+    }
+
+    @media (max-height: 790px) {
+      margin-top: 120px;
     }
 
     .text-block {
@@ -601,6 +608,10 @@
         line-height: 50px;
         color: $titleColor;
         margin-bottom: 48px;
+
+        @media (max-height: 790px) {
+          margin-bottom: 20px;
+        }
       }
 
       &__description {
@@ -688,6 +699,10 @@
     img {
       margin-top: 200px;
       animation: do-levitation 1.8s alternate ease-in-out infinite;
+
+      @media (max-height: 790px) {
+        margin-top: 120px;
+      }
 
       &:hover {
         transform: scale(1.1);
