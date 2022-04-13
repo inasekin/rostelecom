@@ -49,5 +49,4 @@ export const renderMenuFunctions = () => {
 		})
 	}
 
-
 }

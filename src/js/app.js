@@ -55,3 +55,15 @@ modalButton[3].addEventListener( "click" , () => {
     modal[3].classList.toggle("hidden");
     button[2].classList.toggle("hidden");
 });
+
+button[3].addEventListener( "click" , () => {
+    round[3].classList.toggle("hidden");
+    modal[4].classList.toggle("hidden");
+    button[3].classList.toggle("hidden");
+});
+
+modalButton[4].addEventListener( "click" , () => {
+    round[3].classList.toggle("hidden");
+    modal[4].classList.toggle("hidden");
+    button[3].classList.toggle("hidden");
+});

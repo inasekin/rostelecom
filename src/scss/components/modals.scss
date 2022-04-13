@@ -10,6 +10,10 @@
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10001;
 
+  @media (max-width: 568px) {
+    width: 90%;
+  }
+
   &__close {
     position: absolute;
     top: -4rem;
@@ -19,6 +23,11 @@
     cursor: pointer;
     border: none;
     background: none;
+
+    @media (max-width: 568px) {
+      top: -5rem;
+      right: -1rem;
+    }
   }
 
   &__overlay {

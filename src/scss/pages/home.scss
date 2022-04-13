@@ -846,7 +846,7 @@
     &::after {
       content: '';
       position: absolute;
-      right: 50%;
+      right: 58%;
       top: 100%;
       width: 300px;
       height: 140px;
@@ -863,8 +863,8 @@
   }
 
   &__projector {
-    top: 38%;
-    left: 25%;
+    top: 1%;
+    left: 40%;
     &::after {
       content: '';
       position: absolute;
@@ -885,24 +885,18 @@
   }
 
   &__face {
-    top: 38%;
+    top: 23%;
     left: 25%;
     &::after {
       content: '';
       position: absolute;
-      right: 50%;
-      top: 100%;
-      width: 300px;
-      height: 140px;
+      height: 193px;
+      bottom: 10%;
+      left: 99%;
+      width: 200px;
+      transform: rotate(90deg);
       border: 2px solid #FF4F12;
-      border-width: 0 2px 2px 0;
-      @media (max-width: 1690px) {
-        height: 110px;
-        width: 260px;
-      }
-      @media (max-width: 1440px) {
-        height: 70px;
-      }
+      border-width: 2px 0 0 2px;
     }
   }
 
@@ -912,19 +906,12 @@
     &::after {
       content: '';
       position: absolute;
-      right: 50%;
-      top: 100%;
+      left: 50%;
+      bottom: 100%;
       width: 300px;
-      height: 140px;
+      height: 40px;
       border: 2px solid #FF4F12;
-      border-width: 0 2px 2px 0;
-      @media (max-width: 1690px) {
-        height: 110px;
-        width: 260px;
-      }
-      @media (max-width: 1440px) {
-        height: 70px;
-      }
+      border-width: 2px 0 0 2px;
     }
   }
 
