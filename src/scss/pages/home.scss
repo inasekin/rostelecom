@@ -228,7 +228,7 @@
     margin-top: 400px;
     z-index: 10;
 
-    @media (max-height: 850px) {
+    @media (max-width: 1440px) {
       margin-top: 350px;
     }
     @media (max-width: 998px) {
@@ -540,6 +540,7 @@
 .streets_desktop_svg {
   width: auto;
   height: 100vh;
+  margin: 0 auto;
 }
 
 .town {
@@ -838,6 +839,15 @@
       border: 2px solid #FF4F12;
       border-width: 2px 0 0 2px;
     }
+
+    @media (max-width: 1650px) {
+      right: 29%;
+    }
+
+    @media (max-width: 1440px) {
+      right: 28%;
+      top: 52%;
+    }
   }
 
   &__notebook {
@@ -860,10 +870,18 @@
         height: 70px;
       }
     }
+
+    @media (max-width: 1650px) {
+      left: 33%;
+    }
+
+    @media (max-width: 1580px) {
+      left: 37%;
+    }
   }
 
   &__projector {
-    top: 1%;
+    top: 12%;
     left: 40%;
     &::after {
       content: '';
@@ -871,7 +889,7 @@
       right: 50%;
       top: 100%;
       width: 300px;
-      height: 140px;
+      height: 80px;
       border: 2px solid #FF4F12;
       border-width: 0 2px 2px 0;
       @media (max-width: 1690px) {
@@ -885,8 +903,8 @@
   }
 
   &__face {
-    top: 23%;
-    left: 25%;
+    top: 28%;
+    left: 33%;
     &::after {
       content: '';
       position: absolute;
@@ -897,12 +915,27 @@
       transform: rotate(90deg);
       border: 2px solid #FF4F12;
       border-width: 2px 0 0 2px;
+
+      @media (max-width: 1280px) {
+        height: 40px;
+        bottom: 40%;
+        left: 77%;
+      }
+    }
+
+    @media (max-width: 1580px) {
+      top: 24%;
+      left: 27%;
+    }
+
+    @media (max-width: 1280px) {
+
     }
   }
 
   &__gos {
-    top: 38%;
-    left: 25%;
+    top: 68%;
+    left: 56%;
     &::after {
       content: '';
       position: absolute;
@@ -912,6 +945,18 @@
       height: 40px;
       border: 2px solid #FF4F12;
       border-width: 2px 0 0 2px;
+    }
+
+    @media (max-width: 1650px) {
+      left: 52%;
+    }
+    
+    @media (max-width: 1440px) {
+      left: 47%;
+    }
+
+    @media (max-width: 1280px) {
+      left: 42%;
     }
   }
 

@@ -20,50 +20,25 @@ const round = document.querySelectorAll(".town__round");
 const modal = document.querySelectorAll(".town-modal");
 const modalButton = document.querySelectorAll(".town-modal__button");
 
-button[0].addEventListener( "click" , () => {
-    round[0].classList.toggle("hidden");
-    modal[0].classList.toggle("hidden");
-    button[0].classList.toggle("hidden");
-});
+const closeAllModals = () => {
+    for (let i = 0; i < modal.length; i++) {
+        button[i].classList.remove('hidden')
+        modal[i].classList.add("hidden");
+        round[i].classList.add('hidden');
+    }
+}
 
-modalButton[0].addEventListener( "click" , () => {
-    round[0].classList.toggle("hidden");
-    modal[0].classList.toggle("hidden");
-    button[0].classList.toggle("hidden");
-});
+for (let i = 0; i < button.length; i++) {
+    button[i].addEventListener( "click" , () => {
+        closeAllModals();
+        button[i].classList.toggle("hidden");
+        round[i].classList.toggle("hidden");
+        modal[i].classList.toggle("hidden");
+    });
 
-button[1].addEventListener( "click" , () => {
-    round[1].classList.toggle("hidden");
-    modal[2].classList.toggle("hidden");
-    button[1].classList.toggle("hidden");
-});
-
-modalButton[2].addEventListener( "click" , () => {
-    round[1].classList.toggle("hidden");
-    modal[2].classList.toggle("hidden");
-    button[1].classList.toggle("hidden");
-});
-
-button[2].addEventListener( "click" , () => {
-    round[2].classList.toggle("hidden");
-    modal[3].classList.toggle("hidden");
-    button[2].classList.toggle("hidden");
-});
-
-modalButton[3].addEventListener( "click" , () => {
-    round[2].classList.toggle("hidden");
-    modal[3].classList.toggle("hidden");
-    button[2].classList.toggle("hidden");
-});
-
-button[3].addEventListener( "click" , () => {
-    round[3].classList.toggle("hidden");
-    modal[4].classList.toggle("hidden");
-    button[3].classList.toggle("hidden");
-});
-
-modalButton[4].addEventListener( "click" , () => {
-    round[3].classList.toggle("hidden");
-    modal[4].classList.toggle("hidden");
-    button[3].classList.toggle("hidden");
-});
+    modalButton[i].addEventListener( "click" , () => {
+        round[i].classList.toggle("hidden");
+        modal[i].classList.toggle("hidden");
+        button[i].classList.toggle("hidden");
+    });
+}
