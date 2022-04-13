@@ -817,6 +817,7 @@
   box-sizing: border-box;
   border-radius: 8px;
   width: 349px;
+  z-index: 1000;
 
   &__camera {
     top: 38%;
@@ -866,7 +867,7 @@
   }
 
   &__notebook {
-    top: 22%;
+    top: 36%;
     left: 38%;
     &::after {
       content: '';
@@ -887,7 +888,7 @@
     }
 
     @media (max-width: 1650px) {
-      left: 33%;
+      left: 37%;
     }
 
     @media (max-width: 1580px) {
@@ -908,24 +909,32 @@
       border: 2px solid #FF4F12;
       border-width: 0 2px 2px 0;
       @media (max-width: 1690px) {
-        height: 110px;
+        height: 50px;
         width: 260px;
       }
       @media (max-width: 1440px) {
         height: 70px;
       }
+
+      @media (max-width: 1400px) {
+        height: 40px;
+      }
+    }
+
+    @media (max-width: 1400px) {
+      top: 14%;
     }
   }
 
   &__face {
-    top: 28%;
-    left: 33%;
+    top: 29%;
+    left: 38%;
     &::after {
       content: '';
       position: absolute;
-      height: 193px;
+      height: 103px;
       bottom: 10%;
-      left: 99%;
+      left: 86%;
       width: 200px;
       transform: rotate(90deg);
       border: 2px solid #FF4F12;
@@ -938,13 +947,13 @@
       }
     }
 
-    @media (max-width: 1580px) {
-      top: 24%;
-      left: 27%;
+    @media (max-width: 1550px) {
+      left: 30%;
     }
 
+
     @media (max-width: 1400px) {
-      left: 20%;
+      left: 28%;
     }
 
     @media (max-width: 1280px) {

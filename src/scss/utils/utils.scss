@@ -43,9 +43,9 @@
   &--video {
     position: absolute;
     bottom: -80px;
-    
-    @media (min-width: 1440px) {
-      
+
+    @media (max-height: 790px) {
+      bottom: -60px !important;
     }
 
     @media (max-width: 900px) {
@@ -64,6 +64,10 @@
   &--about {
     position: absolute;
     bottom: 77px;
+
+    @media (max-height: 790px) {
+      bottom: 60px !important;
+    }
 
     @media (max-width: 950px) {
       display: none;
