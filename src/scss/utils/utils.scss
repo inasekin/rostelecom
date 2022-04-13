@@ -26,7 +26,7 @@
     margin-top: 12px;
   }
 
-  @media (max-height: 790px) {
+  @media (max-height: 850px) {
     margin-top: 80px;
   }
 
@@ -44,8 +44,8 @@
     position: absolute;
     bottom: -80px;
 
-    @media (max-height: 790px) {
-      bottom: -60px !important;
+    @media (max-height: 850px) {
+      bottom: -30px !important;
     }
 
     @media (max-width: 900px) {
@@ -65,7 +65,7 @@
     position: absolute;
     bottom: 77px;
 
-    @media (max-height: 790px) {
+    @media (max-height: 850px) {
       bottom: 60px !important;
     }
 
