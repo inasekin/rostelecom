@@ -65,6 +65,27 @@
       display: none;
     }
   }
+
+  &--humans {
+    position: absolute;
+    bottom: 77px;
+    left: 150px;
+    z-index: 10000;
+
+    @media (max-width: 950px) {
+      display: none;
+    }
+  }
+
+  &--home {
+    position: absolute;
+    bottom: 55px;
+    left: 150px;
+    z-index: 10000;
+    @media (max-width: 950px) {
+      display: none;
+    }
+  }
 }
 
 .hidden {
@@ -85,6 +106,12 @@
   position: absolute;
 }
 
+@media (max-width: 1280px) {
+  .tooltip-main {
+    display: none !important;
+  }
+}
+
 @media (max-width: 768px) {
   .swiper {
     height: 660px;
@@ -96,9 +123,6 @@
 }
 
 @media (max-height: 850px) {
-  .tooltip-main {
-    display: none !important;
-  }
 
   #section2 {
     overflow: hidden;

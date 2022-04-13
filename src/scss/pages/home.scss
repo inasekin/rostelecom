@@ -928,6 +928,10 @@
       left: 27%;
     }
 
+    @media (max-width: 1400px) {
+      left: 20%;
+    }
+
     @media (max-width: 1280px) {
 
     }
@@ -951,12 +955,16 @@
       left: 52%;
     }
     
-    @media (max-width: 1440px) {
+    @media (max-width: 1450px) {
+      left: 50%;
+    }
+
+    @media (max-width: 1400px) {
       left: 47%;
     }
 
     @media (max-width: 1280px) {
-      left: 42%;
+      left: 45%;
     }
   }
 
