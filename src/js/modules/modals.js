@@ -8,6 +8,11 @@ export const renderModals = () => {
 
     const svgButton = document.querySelector('.vector-svg__play');
 
+    const videoImageBtn = document.querySelector('.video__image--mobile');
+    videoImageBtn.addEventListener('click', () => {
+        openModal(videoModal, videoModalOverlay);
+    });
+
     btnOpenVideoModal.addEventListener('click', (evt) => {
         evt.preventDefault();
         openModal(videoModal, videoModalOverlay);

@@ -4,6 +4,11 @@
   top: 0;
   z-index: 10000;
 
+  @media (max-width: 768px) {
+    background-color: #fff;
+    padding-bottom: 20px;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;

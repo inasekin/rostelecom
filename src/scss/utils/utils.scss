@@ -30,6 +30,10 @@
     margin-top: 80px;
   }
 
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
+
   &:hover {
     font-size: 16px;
   }
@@ -124,6 +128,16 @@
   .swiper {
     height: 660px;
   }
+
+  .video__image--mobile {
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+
 
   .textProjects {
     display: none !important;
