@@ -186,12 +186,6 @@
   background-color: #fff;
 }
 
-.swiper.faq-slider-mobile.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-backface-hidden {
-  position: relative;
-  top: -100px;
-  z-index: 10000;
-}
-
 .faq-slider-mobile__title {
   font-weight: 700;
   font-size: 24px;
@@ -329,6 +323,15 @@
   #section4 {
     margin-bottom: 200px;
   }
+
+  .faq__image {
+    display: none;
+  }
+
+  .faq__content.__container {
+    display: none;
+  }
+
   .__container .about__description.description.description-streets {
     margin-top: 0;
   }
@@ -337,22 +340,9 @@
     margin-top: 0;
   }
 
-  .faq .faq__image {
-    bottom: 0 !important;
-  }
-
-  .swiper.faq-slider-mobile.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden {
-    position: absolute;
-    z-index: 100;
-  }
-
-  .faq__slider .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
-    position: absolute;
-  }
-
   .faq-slider-mobile__slide {
-    top: 150px;
-    position: relative;
     width: 95%;
+    top: 160px;
+    position: relative;
   }
 }
