@@ -118,9 +118,85 @@
   position: absolute;
 }
 
+.interior_home_mobile {
+  display: none;
+  margin-top: 200px;
+  position: relative;
+
+  @media (max-width: 900px) {
+    display: block;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 40px;
+    width: 96%;
+    padding: 16px 15px;
+    border-radius: 6px;
+    border: 2px solid $secondaryColor;
+    margin: 8px;
+    background-color: #fff;
+
+    & .title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &__hint {
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FF4F12;
+
+    svg {
+      position: relative;
+      top: 5px;
+      left: 5px;
+    }
+  }
+}
+
+.town-mobile {
+  display: none;
+
+  @media (max-width: 900px) {
+    display: block;
+  }
+}
+
+.orange-link {
+  color: $secondaryColor;
+  text-decoration: underline !important;
+}
+
 @media (max-width: 1280px) {
   .tooltip-main {
     display: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .streets_desktop .__container {
+    padding: 0;
+    position: relative;
+    top: -100px;
+  }
+
+  .about__description.description.description-streets {
+    height: max-content;
+    max-width: 100%;
+    width: 95%;
+    margin: 0 10px;
   }
 }
 
@@ -143,6 +219,8 @@
     display: none !important;
   }
 }
+
+
 
 @media (max-height: 850px) {
 

@@ -22,7 +22,22 @@
     }
 
     @media (max-width: 900px) {
-      display: none;
+
+      .streets_desktop_svg {
+        display: none;
+      }
+    }
+  }
+
+  .streets_desktop__image--mobile {
+    display: none;
+
+    @media (max-width: 900px) {
+      display: block;
+    }
+
+    img {
+      width: 100%;
     }
   }
 
