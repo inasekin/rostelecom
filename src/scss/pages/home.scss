@@ -32,11 +32,11 @@
   }
 
   &__text {
-    margin-top: 230px;
+    margin-top: 130px;
     width: 50%;
 
     @media  (min-width: 1442px) {
-      margin-top: 330px;
+      margin-top: 180px;
     }
 
     @media (max-width: 900px) {
@@ -84,6 +84,7 @@
     @media (max-width: 900px) {
       display: none;
     }
+    top: -150px;
 
     .vector {
 
@@ -230,10 +231,6 @@
 
     @media (max-height: 790px) {
       margin-top: 250px !important;
-    }
-
-    @media (max-width: 768px) {
-      margin-top: 0 !important;
     }
 
     @media (max-width: 1440px) {

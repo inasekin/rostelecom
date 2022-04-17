@@ -298,6 +298,13 @@
   }
 }
 
+@media (max-width: 768px) {
+
+  .video__content .video__description {
+    margin-top: 0 !important;
+  }
+}
+
 @media (max-height: 850px) {
 
   #section2 {
@@ -315,5 +322,37 @@
 @media (max-height: 790px) {
   .about__description.description.description-streets {
     margin-top: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  #section4 {
+    margin-bottom: 200px;
+  }
+  .__container .about__description.description.description-streets {
+    margin-top: 0;
+  }
+
+  .interior_home_mobile {
+    margin-top: 0;
+  }
+
+  .faq .faq__image {
+    bottom: 0 !important;
+  }
+
+  .swiper.faq-slider-mobile.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden {
+    position: absolute;
+    z-index: 100;
+  }
+
+  .faq__slider .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    position: absolute;
+  }
+
+  .faq-slider-mobile__slide {
+    top: 150px;
+    position: relative;
+    width: 95%;
   }
 }
