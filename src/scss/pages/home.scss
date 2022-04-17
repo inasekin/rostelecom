@@ -585,6 +585,14 @@
 
 .faq {
 
+  &__slider {
+    display: none;
+
+    @media (max-width: 900px) {
+      display: contents;
+    }
+  }
+
   &__content {
     display: flex;
     width: 100%;
@@ -733,11 +741,11 @@
       }
 
       &__text {
+        display: none;
         margin-top: 40px;
         margin-bottom: 86px;
         width: 100%;
         order: 2;
-
 
         .text-block__links {
           .links__link {
