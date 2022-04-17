@@ -5,15 +5,11 @@ import {renderModals} from "./modules/modals.js";
 import {renderMenu, renderMenuFunctions} from "./modules/functions.js";
 import {renderAnimations} from "./modules/animations.js";
 
-// fullPage();
 flsFunctions.isWebp();
 renderModals();
 renderMenuFunctions();
 renderAnimations();
-/*
-import Swiper, { Navigation, Pagination } from 'swiper';
-const swiper = new Swiper();
-*/
+
 const backgroundTownScreen = document.querySelector('.town__vector');
 const button = document.querySelectorAll(".town__circle-button");
 const round = document.querySelectorAll(".town__round");

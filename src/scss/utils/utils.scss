@@ -276,7 +276,27 @@
   }
 }
 
+.hint-container {
+  position: absolute;
+  bottom: 5%;
+  transition: all .3s;
+  cursor: pointer;
+  color: $secondaryColor;
 
+  svg {
+    position: relative;
+    top: 4px;
+    margin-right: 10px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
 
 @media (max-height: 850px) {
 
