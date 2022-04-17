@@ -14,7 +14,7 @@ renderAnimations();
 import Swiper, { Navigation, Pagination } from 'swiper';
 const swiper = new Swiper();
 */
-
+const backgroundTownScreen = document.querySelector('.town__vector');
 const button = document.querySelectorAll(".town__circle-button");
 const round = document.querySelectorAll(".town__round");
 const modal = document.querySelectorAll(".town-modal");
@@ -27,6 +27,12 @@ const closeAllModals = () => {
         round[i].classList.add('hidden');
     }
 }
+
+backgroundTownScreen.addEventListener('click', (evt) => {
+    if (evt.target.nodeName !== 'use') {
+        closeAllModals();
+    }
+})
 
 for (let i = 0; i < button.length; i++) {
     button[i].addEventListener( "click" , () => {

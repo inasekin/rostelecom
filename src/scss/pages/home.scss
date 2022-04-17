@@ -863,6 +863,28 @@
     }
   }
 
+  &__internet {
+    top: 38%;
+    left: 45%;
+    &::after {
+      content: '';
+      position: absolute;
+      right: 50%;
+      top: 100%;
+      width: 300px;
+      height: 140px;
+      border: 2px solid #FF4F12;
+      border-width: 0 2px 2px 0;
+      @media (max-width: 1690px) {
+        height: 110px;
+        width: 280px;
+      }
+      @media (max-width: 1440px) {
+        height: 70px;
+      }
+    }
+  }
+
   &__intercom {
     top: 45%;
     transform: translateY(-50%);

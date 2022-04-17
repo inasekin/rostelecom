@@ -1,6 +1,42 @@
 import { PointCircle } from "../data.js";
 import {createPopper} from "@popperjs/core";
 
+const backgroundInteriorOffice = document.querySelector('#interior_office');
+const backgroundInteriorHome = document.querySelector('#interior_home');
+const backgroundInteriorPublic = document.querySelector('#interior_public');
+
+const closeTooltips = () => {
+    const tooltips = document.querySelectorAll('.tooltip');
+    const activeSvg = document.querySelectorAll('.active-map');
+
+    for (const element of tooltips) {
+        element.removeAttribute('data-show');
+    }
+
+    for (const vector of activeSvg) {
+        vector.removeAttribute('data-show');
+    }
+}
+
+backgroundInteriorOffice.addEventListener('click', (evt) => {
+   if (evt.target.nodeName !== 'circle') {
+       closeTooltips();
+   }
+});
+
+backgroundInteriorHome.addEventListener('click', (evt) => {
+    if (evt.target.nodeName !== 'circle') {
+        closeTooltips();
+    }
+});
+
+backgroundInteriorPublic.addEventListener('click', (evt) => {
+    if (evt.target.nodeName !== 'circle') {
+        closeTooltips();
+    }
+});
+
+
 [...Array(5)].forEach((_, id) => {
     const close = document.querySelector(`#tooltip-close-main-${id + 1}`);
     const tooltip = document.querySelector(`#tooltip-main-${id + 1}`);
