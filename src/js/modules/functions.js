@@ -37,16 +37,15 @@ export const renderMenuFunctions = () => {
 		menuBurger.classList.remove('hidden');
 	});
 
-	for (let i = 0; i < menuBurgerItems.length; i++) {
-		menuBurgerItems[i].addEventListener('click', () => {
+	for (const element of menuBurgerItems) {
+		element.addEventListener('click', () => {
 
-			if (!menuBurgerItems[i].classList.contains('active')) {
-				menuItemOpen.textContent = menuBurgerItems[i].textContent;
+			if (!element.classList.contains('active')) {
+				menuItemOpen.textContent = element.textContent;
 			}
 
 			menuItemOpen.classList.remove('hidden');
 			menuBurger.classList.add('hidden');
 		})
 	}
-
 }

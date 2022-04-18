@@ -16,6 +16,10 @@ const round = document.querySelectorAll(".town__round");
 const modal = document.querySelectorAll(".town-modal");
 const modalButton = document.querySelectorAll(".town-modal__button");
 
+const menuMobile = document.querySelector('.menu__mobile');
+const menuMobileContent = document.querySelector('.menu__mobile_content');
+const menuName = document.querySelector('.menu-name');
+
 const closeAllModals = () => {
     for (let i = 0; i < modal.length; i++) {
         button[i].classList.remove('hidden')
@@ -43,4 +47,29 @@ for (let i = 0; i < button.length; i++) {
         modal[i].classList.toggle("hidden");
         button[i].classList.toggle("hidden");
     });
+}
+
+if (window.innerWidth < 900) {
+
+    fullpage_api.setAutoScrolling(false);
+    fullpage_api.setResponsive(true);
+    document.querySelector('.menu__item').remove();
+    menuMobileContent.innerHTML = document.querySelector('.header__menu').innerHTML;
+    document.querySelector('.menu__burger').classList.remove('hidden');
+
+    menuName.addEventListener('click', () => {
+        if (menuName.textContent === 'Меню') {
+            menuMobile.classList.remove('hidden');
+            menuMobileContent.classList.remove('hidden');
+            menuName.textContent = 'Назад';
+        } else {
+            menuMobileContent.classList.add('hidden');
+            menuName.textContent = 'Меню';
+        }
+    });
+
+
+} else {
+    menuMobile.classList.add('hidden');
+    menuMobileContent.classList.add('hidden');
 }
