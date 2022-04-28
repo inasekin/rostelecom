@@ -71,3 +71,14 @@
     }
   }
 }
+
+.swiper-button {
+  &-prev {
+    left: 25px !important;
+    color: #FF4F12 !important;
+  }
+  &-next {
+    right: 25px !important;
+    color: #FF4F12 !important;
+  }
+}

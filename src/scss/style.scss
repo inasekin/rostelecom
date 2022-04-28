@@ -26,6 +26,7 @@ $mobileSmall: em(479.98); // Телефоны S
 @import "utils/animations";
 
 body {
+  background-color: #F6F6F6;
   font-family: $fontFamily;
   font-weight: 400;
   overflow-x: hidden;
