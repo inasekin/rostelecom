@@ -20,8 +20,6 @@ const menuMobile = document.querySelector('.menu__mobile');
 const menuMobileContent = document.querySelector('.menu__mobile_content');
 const menuName = document.querySelector('.menu-name');
 
-const tooltipModal = document.querySelectorAll(".tooltip-main");
-
 const closeAllModals = () => {
     for (let i = 0; i < modal.length; i++) {
         button[i].classList.remove('hidden')
@@ -43,7 +41,7 @@ for (let i = 0; i < button.length; i++) {
         button[i].classList.toggle("hidden");
         round[i].classList.toggle("hidden");
         modal[i].classList.toggle("hidden");
-        tooltipModal.classList.add("hidden");
+        document.querySelector("#tooltip-main-5").setAttribute('tooltip-hide', "");
     });
 
     modalButton[i].addEventListener( "click" , () => {

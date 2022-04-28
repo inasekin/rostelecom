@@ -40,9 +40,11 @@ backgroundInteriorPublic.addEventListener('click', (evt) => {
 [...Array(5)].forEach((_, id) => {
     const close = document.querySelector(`#tooltip-close-main-${id + 1}`);
     const tooltip = document.querySelector(`#tooltip-main-${id + 1}`);
+
     close.addEventListener("click", () => {
         tooltip.setAttribute('tooltip-hide', "");
-    })
+    });
+
 })
 
 PointCircle.forEach((frame, idx) => {
@@ -57,6 +59,8 @@ PointCircle.forEach((frame, idx) => {
         const pulse = document.querySelector(`#circle-pulse-${circle.id}`);
 
         button.addEventListener("click", (e) => {
+            console.log(button);
+
             setPulse();
             clearAttr();
             const offset = circle.position === 'right-top' ? [-115, 100] : circle.position === 'left-bottom' ? [125, 100] : circle.position === 'left-top' ? [-250, 100] : [100, 100];
@@ -64,6 +68,8 @@ PointCircle.forEach((frame, idx) => {
             header.textContent = circle.header;
             body.textContent = circle.body;
             pulse.removeAttribute('data-show');
+
+            button.closest('section').querySelector('.tooltip-main').setAttribute('tooltip-hide', "");
 
             const popperInstance = createPopper(button, tooltip, {
                 placement: circle.placement,
