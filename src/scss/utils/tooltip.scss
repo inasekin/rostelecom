@@ -1,12 +1,12 @@
 .tooltip, .tooltip-main {
-  padding: 34px 30px;
+  padding: 17px 15px;
   position: relative;
   background: white;
   color: black;
   border: 2px solid rgb(255, 79, 18);
   border-radius: 8px;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 14px;
   z-index: 1000;
   width: 350px;
   max-height: 150px;
@@ -22,9 +22,10 @@
     height: 70px;
     overflow: auto;
     padding-right: 20px;
+    line-height: 18px;
 
     &::-webkit-scrollbar {
-      width: 2px;
+      width: 4px;
     }
 
     &::-webkit-scrollbar-track {
@@ -44,6 +45,7 @@
 }
 
 .tooltip-main {
+  padding: 37px 30px;
   display: flex;
   flex-direction: column;
   align-content: flex-end;
@@ -80,6 +82,7 @@
     font-weight: 300;
     height: initial;
     overflow: hidden;
+    line-height: 20px;
   }
 }
 
