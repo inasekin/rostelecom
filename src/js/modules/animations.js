@@ -42,7 +42,6 @@ export const renderAnimations = () => {
                         scrub: true
                     }
                 }).from(".vector-svg__main", { y: -innerHeight * 1.5 });
-
                 clearInterval(interval);
             }
         }, 300);

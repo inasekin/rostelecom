@@ -20,11 +20,14 @@ const menuMobile = document.querySelector('.menu__mobile');
 const menuMobileContent = document.querySelector('.menu__mobile_content');
 const menuName = document.querySelector('.menu-name');
 
+const close = document.querySelectorAll('.tooltip-close');
+
 const closeAllModals = () => {
     for (let i = 0; i < modal.length; i++) {
         button[i].classList.remove('hidden')
         modal[i].classList.add("hidden");
         round[i].classList.add('hidden');
+        
     }
 }
 

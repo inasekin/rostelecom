@@ -203,6 +203,44 @@
 					keyboardScrolling: true,
 					touchSensitivity: 55,
 					scrollingSpeed: 800,
+					onLeave: function(origin, destination) {
+						let nextPage = destination.item,
+						currentPage = origin.item,
+						menuTitle = document.querySelector('.menu__item');
+
+						if (nextPage.querySelector('.tooltip-main')) {				
+							interval = setInterval(() => {
+								nextPage.querySelector('.tooltip-main').setAttribute('tooltip-hide', "");
+							}, 10000);
+						}
+
+						if (currentPage.querySelector('.tooltip')) {
+							currentPage.querySelector('.tooltip').removeAttribute('data-show');
+						}
+
+						switch(destination.index) {
+							case 0:
+								menuTitle.innerHTML = "Главный экран";
+								break;
+							case 1:
+								menuTitle.innerHTML = "Видео FAQ";
+								break;
+							case 2:
+							case 3:
+								menuTitle.innerHTML = "Люди";
+								break;
+							case 5:
+							case 7:
+							case 9:
+							case 11:
+								menuTitle.innerHTML = "Проекты";
+								break;
+							case 12:
+								menuTitle.innerHTML = "Полезные ссылки";
+								break;
+						}
+
+					}
 				});
 
 				const hintsBtns = document.querySelectorAll('.hint-container');

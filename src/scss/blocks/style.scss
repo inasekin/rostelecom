@@ -9,6 +9,7 @@
     width: 125%;
     left: -26%;
     max-height: 100vh;
+    transform: scale(1.05);
 
     @media (max-width: 900px) {
       display: none;

@@ -8,6 +8,7 @@ export function initPopper(button, tooltip, active, position, name, description)
 
     header.textContent = name;
     body.textContent = description;
+    body.scrollTop = 0;
     const popperInstance = createPopper(button, tooltip, {
         placement: position,
         modifiers: [

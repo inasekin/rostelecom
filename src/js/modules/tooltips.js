@@ -9,6 +9,7 @@ const closeTooltips = () => {
     const tooltips = document.querySelectorAll('.tooltip');
     const activeSvg = document.querySelectorAll('.active-map');
 
+    
     for (const element of tooltips) {
         element.removeAttribute('data-show');
     }
@@ -54,19 +55,20 @@ PointCircle.forEach((frame, idx) => {
     const tooltip = document.querySelector(`#tooltip-${index}`);
     const close = document.querySelector(`#tooltip-close-${index}`);
 
+
     frame.forEach((circle) => {
         const button = document.querySelector(`#button-point-${circle.id}`);
         const pulse = document.querySelector(`#circle-pulse-${circle.id}`);
 
         button.addEventListener("click", (e) => {
-            console.log(button);
-
+            body.scrollTop = 0;
             setPulse();
             clearAttr();
             const offset = circle.position === 'right-top' ? [-115, 100] : circle.position === 'left-bottom' ? [125, 100] : circle.position === 'left-top' ? [-250, 100] : [100, 100];
             const active = circle.activeSvg ? document.querySelector(circle.activeSvg) : undefined;
             header.textContent = circle.header;
             body.textContent = circle.body;
+
             pulse.removeAttribute('data-show');
 
             button.closest('section').querySelector('.tooltip-main').setAttribute('tooltip-hide', "");
@@ -90,10 +92,13 @@ PointCircle.forEach((frame, idx) => {
                 ],
             });
 
+
             close.addEventListener('click', () => {
+                body.scrollTop = 0;
                 tooltip.removeAttribute('data-show');
                 button.removeAttribute('data-show');
                 pulse.setAttribute('data-show', '');
+
                 if (active) active.removeAttribute('data-show');
                 // Disable the event listeners
                 popperInstance.setOptions((options) => ({
@@ -106,6 +111,7 @@ PointCircle.forEach((frame, idx) => {
             })
 
             document.addEventListener('click', (event) => {
+                body.scrollTop = 0;
                 if(button.contains(event.target)) {
                     // Make the tooltip visible
                     tooltip.setAttribute('data-show', '');
@@ -151,3 +157,4 @@ function setPulse() {
         })
     })
 }
+
