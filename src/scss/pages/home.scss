@@ -555,47 +555,12 @@
 .town {
 
   &__picture {
-    max-height: 100vh;
-    overflow: hidden;
+    position: relative;
   }
 
   &__vector {
-    position: relative;
-    transform: scale(2.6);
-    height: 100vh;
-    left: 20%;
-    bottom: 490px;
-
-    @media (max-width: 1600px) {
-      transform: scale(2);
-      left: 15%;
-      bottom: 220px;
-    }
-
-    @media (max-width: 1400px) {
-      transform: scale(1.8);
-      left: 5%;
-      bottom: 200px;
-    }
-
-    @media (max-width: 1200px) {
-      transform: scale(1.6);
-      left: -2%;
-      bottom: 120px;
-    }
-
-    @media (max-width: 1000px) {
-      left: -6%;
-    }
-
-    @media (max-width: 900px) {
-      display: none;
-    }
-
-    @media (max-height: 660px) {
-      bottom: 360px;
-    }
-
+    width: 100%;
+    height: 100%;
   }
 
   &__circle-button {
@@ -875,14 +840,14 @@
 
 .town-modal {
   position: absolute;
-  padding: 17px 15px;
+  display: block;
+  padding: 20px 20px 18px 26px;
   background: #F6F6F6;
   border: 2px solid #FF4F12;
   box-sizing: border-box;
   border-radius: 8px;
   width: 349px;
   z-index: 1000;
-  display: block;
 
   &__camera {
     top: 38%;
@@ -893,7 +858,7 @@
       right: 50%;
       top: 100%;
       width: 300px;
-      height: 80px;
+      height: 140px;
       border: 2px solid #FF4F12;
       border-width: 0 2px 2px 0;
       @media (max-width: 1690px) {
@@ -907,17 +872,17 @@
   }
 
   &__internet {
-    top: 30%;
+    top: 38%;
     left: 45%;
     &::after {
       content: '';
       position: absolute;
-      right: 100%;
-      top: 50%;
-      width: 315px;
-      height: 80px;
+      right: 50%;
+      top: 100%;
+      width: 288px;
+      height: 220px;
       border: 2px solid #FF4F12;
-      border-width: 2px 0 0 2px;
+      border-width: 0 2px 2px 0;
       @media (max-width: 1690px) {
         height: 110px;
         width: 280px;
@@ -937,8 +902,8 @@
       position: absolute;
       left: 50%;
       bottom: 100%;
-      width: 235px;
-      height: 130px;
+      width: 300px;
+      height: 40px;
       border: 2px solid #FF4F12;
       border-width: 2px 0 0 2px;
     }
@@ -961,8 +926,8 @@
       position: absolute;
       right: 58%;
       top: 100%;
-      width: 280px;
-      height: 150px;
+      width: 270px;
+      height: 225px;
       border: 2px solid #FF4F12;
       border-width: 0 2px 2px 0;
       @media (max-width: 1690px) {
@@ -984,19 +949,20 @@
   }
 
   &__projector {
-    top: 12%;
+    top: 20%;
     left: 40%;
     &::after {
       content: '';
       position: absolute;
       right: 50%;
       top: 100%;
-      width: 250px;
+      width: 270px;
       height: 80px;
       border: 2px solid #FF4F12;
       border-width: 0 2px 2px 0;
       @media (max-width: 1690px) {
-        height: 135px;
+        height: 50px;
+        width: 260px;
       }
       @media (max-width: 1440px) {
         height: 70px;
@@ -1013,19 +979,18 @@
   }
 
   &__face {
-    top: 33%;
-    left: 40%;
+    top: 29%;
+    left: 38%;
     &::after {
       content: '';
       position: absolute;
-      height: 72px;
-      bottom: 10%;
-      left: 95%;
-      width: 110px;
-      transform: rotate(90deg);
+      position: absolute;
+      height: 180px;
+      top: 50%;   
+      left: 100%;
+      width: 140px;
       border: 2px solid #FF4F12;
-      border-width: 2px 0 0 2px;
-
+      border-width: 2px 2px 0 0;
       @media (max-width: 1280px) {
         height: 40px;
         bottom: 40%;
@@ -1048,15 +1013,15 @@
   }
 
   &__gos {
-    top: 70%;
-    left: 57%;
+    top: 68%;
+    left: 56%;
     &::after {
       content: '';
       position: absolute;
       left: 50%;
       bottom: 100%;
-      width: 310px;
-      height: 110px;
+      width: 320px;
+      height: 40px;
       border: 2px solid #FF4F12;
       border-width: 2px 0 0 2px;
     }
@@ -1093,7 +1058,6 @@
     margin-bottom: 15px;
   }
   &__content {
-    font-size: 14px;
     line-height: 18px;
   }
 }
