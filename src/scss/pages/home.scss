@@ -556,6 +556,8 @@
 
   &__picture {
     position: relative;
+    max-height: 100vh;
+    overflow: hidden;
   }
 
   &__vector {
@@ -563,9 +565,25 @@
     height: 100%;
   }
 
-  &__circle-button {
-    cursor: pointer;
+  &__circle {
+
+    &-button {
+      cursor: pointer;
+    }
+    &-button[data-hide] {
+      display: none;
+    }
+
+    &--big {
+      display: none;
+    }
+
+    &--big[data-show] {
+      display: block;
+    }
+
   }
+  
 
   .circle-pulse-town {
     r: 8;

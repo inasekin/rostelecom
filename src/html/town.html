@@ -1,5 +1,19 @@
 <section id="section7" class="section town">
+
     <div class="town__picture">
+
+        <div class="tooltip" id="tooltip-town" role="tooltip">
+            <div class="tooltip-header">
+                <span id="tooltip-town__header">header</span>
+                <svg id="tooltip-town__close" class="tooltip-close" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="11.3536" y1="0.353553" x2="0.353553" y2="11.3536" stroke="#575D68"/>
+                    <line x1="11.6464" y1="11.3536" x2="0.646446" y2="0.353554" stroke="#575D68"/>
+                </svg>
+            </div>
+            <div class="tooltip-body" id="tooltip-town__body">body</div>
+            <div id="arrow" data-popper-arrow></div>
+        </div>
+
         <div class="__container">
             <div class="tooltip-main" id="tooltip-main-5">
                 <div class="tooltip-header">
@@ -18,15 +32,8 @@
             </div>
         </div>
         
-        <svg
-                class="town__vector"
-                width="1440"
-                height="800"
-                viewBox="0 0 1440 800"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="none"
-        >
+        <svg class="town__vector" width="1440" height="800" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRati
+        o="none">
             <g clip-path="url(#clip0_2_2948)">
                 <rect width="1440" height="800" fill="#F6F6F6" />
                 <path
@@ -15782,7 +15789,7 @@
                     <mask id="mask0_406_40570" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="144" height="144">
                         <circle cx="72" cy="72" r="72" fill="#FF4F12"/>
                     </mask>
-                    <g mask="url(#mask0_406_40570)">
+                    <g mask="url(#mask0_406_40570)" width="144" height="144">
                         <path d="M50.6152 124.305V174.794L70.1763 163.559V113.203L50.6152 124.305Z" fill="#F6F6F6" stroke="#575D68" stroke-width="0.4" stroke-miterlimit="10"/>
                         <path d="M66.3434 132.633C65.6825 137.655 62.6427 141.356 59.6028 141.092C56.6951 140.827 54.7125 137.126 55.109 132.501C55.5055 127.742 58.2811 123.513 61.4532 123.381C64.7574 123.117 67.0042 127.346 66.3434 132.633Z" fill="#F6F6F6" stroke="#575D68" stroke-width="0.4" stroke-miterlimit="10"/>
                         <path d="M50.6157 174.794L24.0498 159.462V110.824L50.6157 124.305V174.794Z" fill="#F6F6F6" stroke="#575D68" stroke-width="0.4" stroke-miterlimit="10"/>
@@ -16125,32 +16132,34 @@
             <use xlink:href="#light-signboard" x="1303" y="439" class="town__light"/>
 
 
-            <use xlink:href="#camera" x="145" y="465" class="town__round hidden"/>
+            <use xlink:href="#camera" id="big-circle-town-1" x="145" y="465" class="town__circle--big"/>
 
-            <use xlink:href="#internet" x="420" y="505" class="town__round hidden"/>
+            
+            <use xlink:href="#internet" id="big-circle-town-2" x="420" y="490" class="town__circle--big"/>
 
-            <use xlink:href="#monitor" x="315" y="490" class="town__round hidden"/>
+            <use xlink:href="#monitor" id="big-circle-town-3" x="315" y="490" class="town__circle--big"/>
 
-            <use xlink:href="#webcam" x="387" y="260" class="town__round hidden"/>
+            <use xlink:href="#webcam" id="big-circle-town-4" x="387" y="260" class="town__circle--big"/>
 
-            <use xlink:href="#phone" x="840" y="415" class="town__round hidden"/>
+            <use xlink:href="#phone" id="big-circle-town-5" x="840" y="415" class="town__circle--big"/>
 
-            <use xlink:href="#intercom" x="1125" y="170" class="town__round hidden"/>
+            <use xlink:href="#intercom" id="big-circle-town-6" x="1125" y="170" class="town__circle--big"/>
 
-            <use xlink:href="#services" x="1170" y="430" class="town__round hidden"/>
+            <use xlink:href="#services" id="big-circle-town-7" x="1170" y="430" class="town__circle--big"/>
 
 
-            <use xlink:href="#circle" x="218" y="525" class="town__circle-button"/>
-            <use xlink:href="#circle" x="415" y="505" class="town__circle-button"/>
-            <use xlink:href="#circle" x="398" y="580" class="town__circle-button"/>
-            <use xlink:href="#circle" x="450" y="350" class="town__circle-button"/>
-            <use xlink:href="#circle" x="925" y="480" class="town__circle-button"/>
-            <use xlink:href="#circle" x="1140" y="240" class="town__circle-button"/>
-            <use xlink:href="#circle" x="1275" y="490" class="town__circle-button"/>
+            <use xlink:href="#circle" id="circle-town-1" x="218" y="525" class="town__circle-button"/>
+            <use xlink:href="#circle" id="circle-town-2" x="415" y="505" class="town__circle-button"/>
+            <use xlink:href="#circle" id="circle-town-3" x="398" y="580" class="town__circle-button"/>
+            <use xlink:href="#circle" id="circle-town-4" x="450" y="350" class="town__circle-button"/>
+            <use xlink:href="#circle" id="circle-town-5" x="925" y="480" class="town__circle-button"/>
+            <use xlink:href="#circle" id="circle-town-6" x="1140" y="240" class="town__circle-button"/>
+            <use xlink:href="#circle" id="circle-town-7" x="1275" y="490" class="town__circle-button"/>
 
 
         </svg>
 
+        <!--
         <div class="town__modal tooltip town-modal town-modal__camera hidden">
             <div class="town-modal__button">✕</div>
             <div class="town-modal__header">
@@ -16220,6 +16229,8 @@
                 Сервис, в котором можно заказать любую государственную услугу: получить выписку или справку, оплатить налоги или погасить штрафы, записаться к врачу или зарегистрировать транспортное средство. Сервис постоянно модернизируется и совершенствуется. Его сделали<br>в Ростелекоме.
             </div>
         </div>
+        -->
+    
     </div>
     <div class="__container">
         <div class="hint-container">

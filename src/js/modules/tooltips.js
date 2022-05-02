@@ -66,8 +66,8 @@ PointCircle.forEach((frame, idx) => {
             clearAttr();
             const offset = circle.position === 'right-top' ? [-110, 100] : circle.position === 'left-bottom' ? [120, 100] : circle.position === 'left-top' ? [-250, 100] : [100, 100];
             const active = circle.activeSvg ? document.querySelector(circle.activeSvg) : undefined;
-            header.textContent = circle.header;
-            body.textContent = circle.body;
+            header.innerText = circle.header;
+            body.innerText = circle.body;
 
             pulse.removeAttribute('data-show');
 
