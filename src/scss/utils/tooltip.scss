@@ -20,9 +20,9 @@
   .tooltip-body {
     font-weight: 400;
     height: 70px;
-    overflow-y: scroll;
+    overflow: auto;
     padding-right: 20px;
-    line-height: 18px;
+    line-height: 17.6px;
 
     &::-webkit-scrollbar {
       width: 4px;
