@@ -12,20 +12,19 @@ renderModals();
 renderMenuFunctions();
 renderAnimations();
 
+/*
 const backgroundTownScreen = document.querySelector('.town__vector');
 const button = document.querySelectorAll(".town__circle-button");
 const round = document.querySelectorAll(".town__round");
 const modal = document.querySelectorAll(".town-modal");
 const modalButton = document.querySelectorAll(".town-modal__button");
+*/
 
 const menuMobile = document.querySelector('.menu__mobile');
 const menuMobileContent = document.querySelector('.menu__mobile_content');
 const menuName = document.querySelector('.menu-name');
 
-
-
-PointTown.forEach((frame, idx) => {
-    const index = idx + 1;
+PointTown.forEach((frame) => {
     const tooltip = document.querySelector('#tooltip-town');
     const header = document.querySelector('#tooltip-town__header');
     const body = document.querySelector('#tooltip-town__body');
