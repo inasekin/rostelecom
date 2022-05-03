@@ -6,6 +6,9 @@
 	<body>
 		@@include('html/header.html',{})
 		<main id="fullpage">
+			
+			@@include('html/fullpage.html', {})
+
 			<!-- Готово -->
 			@@include('html/hero_block.html', {})
 			<!-- Готово -->
@@ -192,6 +195,7 @@
 		@@include('html/footer.html',{})
 		<script>
 
+			
 				new fullpage('#fullpage', {
 					css3: true,
 					lockAnchors: false,
@@ -207,7 +211,7 @@
 						let nextPage = destination.item,
 						currentPage = origin.item,
 						menuTitle = document.querySelector('.menu__item');
-
+						
 						if (nextPage.querySelector('.tooltip-main')) {				
 							interval = setInterval(() => {
 								nextPage.querySelector('.tooltip-main').setAttribute('tooltip-hide', "");

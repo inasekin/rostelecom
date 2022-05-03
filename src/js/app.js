@@ -12,7 +12,6 @@ renderModals();
 renderMenuFunctions();
 renderAnimations();
 
-
 const menuMobile = document.querySelector('.menu__mobile');
 const menuMobileContent = document.querySelector('.menu__mobile_content');
 const menuName = document.querySelector('.menu-name');
@@ -128,9 +127,88 @@ if (window.innerWidth < 900) {
             menuName.textContent = 'Меню';
         }
     });
+    
+    window.addEventListener('scroll', () => {
+        console.log(`Скролл: ${window.pageYOffset}`);
+        console.log(document.querySelector('#section2').top);
+    })
 
 
 } else {
     menuMobile.classList.add('hidden');
     menuMobileContent.classList.add('hidden');
+
+
+    const menu = document.querySelector('.header__menu');
+    const header = document.querySelector('.header__content');
+    const fullpageModal = document.querySelector('#fullpage-modal');
+    const modalButton = document.querySelector('#fullpage-modal');
+    const title = document.querySelector('.hero__title');
+    const description = document.querySelector('.hero__description');
+    const heroHint = document.querySelector('#section0').querySelector('.hint-container');
+
+    function isVideoInFullscreen() {
+    if (document.fullscreenElement) {
+        return true;
+    }
+    return false;
+    }
+    
+    window.addEventListener('load', () => {
+
+        if (window.innerHeight !== screen.height) {
+
+            fullpageModal.onwheel = e => e.stopPropagation();
+
+            fullpageModal.classList.remove('hidden');
+            title.textContent = 'Для лучшего отображения откройте браузер в полноэкранном режиме';
+            description.classList.add('hidden');
+            heroHint.classList.add('hidden');
+            menu.classList.add('hidden');
+            header.style.opacity = 0.2;
+
+            modalButton.addEventListener('click', () => {
+                fullpageModal.classList.add('hidden');
+                title.textContent = 'Привет, на связи Ростелеком!';
+                description.classList.remove('hidden');
+                heroHint.classList.remove('hidden');
+                menu.classList.remove('hidden');
+                header.style.opacity = 1;         
+            })
+
+        }
+
+    })
 }
+
+
+
+/*
+const fullscreenButton = document.querySelector('#fullpage-open');
+
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+
+fullscreenButton.addEventListener('click', () => {
+   
+        toggleFullScreen();
+    
+})
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        setTimeout(() => {
+            fullscreenButton.click();
+        }, 1000);
+    }, 1000);
+})
+
+*/
+

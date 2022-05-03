@@ -45,3 +45,31 @@
     width: 100%;
   }
 }
+
+.fullpage-modal {
+  position: absolute;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  background: rgba(246, 246, 246, 0.8);
+
+  &__hint {
+    position: absolute;
+    z-index: 1000;
+    bottom: 5%;
+    transition: all 0.3s;
+    cursor: pointer;
+    color: #FF4F12;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  svg {
+    position: relative;
+    transform: rotate(90deg);
+    top: 4px;
+    margin-right: 10px;
+  }
+
+}
