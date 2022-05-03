@@ -12,17 +12,30 @@ renderModals();
 renderMenuFunctions();
 renderAnimations();
 
-/*
-const backgroundTownScreen = document.querySelector('.town__vector');
-const button = document.querySelectorAll(".town__circle-button");
-const round = document.querySelectorAll(".town__round");
-const modal = document.querySelectorAll(".town-modal");
-const modalButton = document.querySelectorAll(".town-modal__button");
-*/
 
 const menuMobile = document.querySelector('.menu__mobile');
 const menuMobileContent = document.querySelector('.menu__mobile_content');
 const menuName = document.querySelector('.menu-name');
+
+const townPublic = document.querySelector('.town__vector');
+
+townPublic.addEventListener('click', (e) => {
+    const tooltips = document.querySelectorAll('.tooltip');
+    const buttons = document.querySelectorAll('.town__circle-button');
+    const bigCircle = document.querySelectorAll('.town__circle--big');
+
+    if (e.target.nodeName !== 'use' && e.target.nodeName !== 'image') {
+        for (const element of tooltips) {
+            element.removeAttribute('data-show');
+        }
+        for (const circle of bigCircle) {
+            circle.removeAttribute('data-show');
+        }   
+        for (const button of buttons) {
+            button.removeAttribute('data-hide');
+        }       
+    }
+});
 
 PointTown.forEach((frame) => {
     const tooltip = document.querySelector('#tooltip-town');
@@ -77,23 +90,11 @@ PointTown.forEach((frame) => {
                 bigCircle.removeAttribute('data-show');
             })
 
-            document.addEventListener('click', (event) => {
-                body.scrollTop = 0;
-                if(!button.contains(event.target)) {
-                    tooltip.removeAttribute('data-show');
-                    button.removeAttribute('data-hide');
-                    bigCircle.removeAttribute('data-show');
-                } else {
-                    button.setAttribute('data-hide', '');
-                    bigCircle.setAttribute('data-show', '');
-                    tooltip.setAttribute('data-show', '');     
-                }
-            });
-
         })
     })
 
-})
+});
+
 
 function clearAttr() {
     PointTown.forEach((f) => {
@@ -108,42 +109,6 @@ function clearAttr() {
         })
     })
 }
-
-
-/*
-const closeAllModals = () => {
-    for (let i = 0; i < modal.length; i++) {
-        button[i].classList.remove('hidden')
-        modal[i].classList.add("hidden");
-        round[i].classList.add('hidden');
-        
-    }
-}
-
-
-backgroundTownScreen.addEventListener('click', (evt) => {
-    if (evt.target.nodeName !== 'use') {
-        closeAllModals();
-    }
-})
-
-for (let i = 0; i < button.length; i++) {
-    button[i].addEventListener( "click" , () => {
-        closeAllModals();
-        button[i].classList.toggle("hidden");
-        round[i].classList.toggle("hidden");
-        modal[i].classList.toggle("hidden");
-        document.querySelector("#tooltip-main-5").setAttribute('tooltip-hide', "");
-    });
-
-    modalButton[i].addEventListener( "click" , () => {
-        round[i].classList.toggle("hidden");
-        modal[i].classList.toggle("hidden");
-        button[i].classList.toggle("hidden");
-    });
-}
-
-*/
 
 if (window.innerWidth < 900) {
 

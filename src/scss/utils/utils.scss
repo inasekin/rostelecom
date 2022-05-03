@@ -352,6 +352,7 @@
 
 .hint-container {
   position: absolute;
+  z-index: 1000;
   bottom: 5%;
   transition: all .3s;
   cursor: pointer;
