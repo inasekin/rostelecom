@@ -142,7 +142,7 @@ if (window.innerWidth < 900) {
     const menu = document.querySelector('.header__menu');
     const header = document.querySelector('.header__content');
     const fullpageModal = document.querySelector('#fullpage-modal');
-    const modalButton = document.querySelector('#fullpage-modal');
+    const modalButton = document.querySelector('.fullpage-modal__hint');
     const title = document.querySelector('.hero__title');
     const description = document.querySelector('.hero__description');
     const heroHint = document.querySelector('#section0').querySelector('.hint-container');
@@ -180,35 +180,4 @@ if (window.innerWidth < 900) {
 
     })
 }
-
-
-
-/*
-const fullscreenButton = document.querySelector('#fullpage-open');
-
-function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
-  }
-}
-
-fullscreenButton.addEventListener('click', () => {
-   
-        toggleFullScreen();
-    
-})
-
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        setTimeout(() => {
-            fullscreenButton.click();
-        }, 1000);
-    }, 1000);
-})
-
-*/
 
