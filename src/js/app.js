@@ -15,6 +15,7 @@ renderAnimations();
 const menuMobile = document.querySelector('.menu__mobile');
 const menuMobileContent = document.querySelector('.menu__mobile_content');
 const menuName = document.querySelector('.menu-name');
+const menuMobileLink = menuMobile.querySelectorAll('.burger__item');
 
 const townPublic = document.querySelector('.town__vector');
 
@@ -114,7 +115,7 @@ if (window.innerWidth < 900) {
     fullpage_api.setAutoScrolling(false);
     fullpage_api.setResponsive(true);
     document.querySelector('.menu__item').remove();
-    menuMobileContent.innerHTML = document.querySelector('.header__menu').innerHTML;
+    //menuMobileContent.innerHTML = document.querySelector('.header__menu').innerHTML;
     document.querySelector('.menu__burger').classList.remove('hidden');
 
     menuName.addEventListener('click', () => {
@@ -127,12 +128,15 @@ if (window.innerWidth < 900) {
             menuName.textContent = 'Меню';
         }
     });
-    
-    window.addEventListener('scroll', () => {
-        console.log(`Скролл: ${window.pageYOffset}`);
-        console.log(document.querySelector('#section2').top);
-    })
 
+    for (const link of menuMobileLink) {
+        link.addEventListener('click', () => {
+            menuMobileContent.classList.add('hidden');
+            menuName.textContent = 'Меню';
+        })
+    }
+
+    
 
 } else {
     menuMobile.classList.add('hidden');
@@ -146,13 +150,6 @@ if (window.innerWidth < 900) {
     const title = document.querySelector('.hero__title');
     const description = document.querySelector('.hero__description');
     const heroHint = document.querySelector('#section0').querySelector('.hint-container');
-
-    function isVideoInFullscreen() {
-    if (document.fullscreenElement) {
-        return true;
-    }
-    return false;
-    }
     
     window.addEventListener('load', () => {
 
