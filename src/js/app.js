@@ -153,7 +153,7 @@ if (window.innerWidth < 900) {
     
     window.addEventListener('load', () => {
 
-        if (window.innerHeight !== screen.height) {
+        if (window.outerWidth === screen.availWidth && window.outerHeight === screen.availHeight) {
 
             fullpageModal.onwheel = e => e.stopPropagation();
 
