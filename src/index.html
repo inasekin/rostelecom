@@ -244,6 +244,18 @@
 								break;
 						}
 
+						let bigCircles = document.querySelectorAll('.town__circle--big'),
+							 townButtons = document.querySelectorAll('.town__circle-button');
+
+						for (const circle of bigCircles) {
+							circle.removeAttribute('data-show');
+						}
+
+						for (const button of townButtons) {
+							console.log(button);
+							button.removeAttribute('data-hide');
+						}
+
 					}
 				});
 
