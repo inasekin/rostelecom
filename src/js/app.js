@@ -110,7 +110,15 @@ function clearAttr() {
     })
 }
 
+const headerLogo = document.querySelector('.header__logo');
+
 if (window.innerWidth < 900) {
+
+    window.addEventListener('load', () => { 
+        headerLogo.removeAttribute('style');   
+        document.querySelector('.menu-name').classList.remove('hidden');
+        document.querySelector('.header').style.backgroundColor = "white";
+    })
 
     fullpage_api.setAutoScrolling(false);
     fullpage_api.setResponsive(true);
@@ -162,17 +170,19 @@ if (window.innerWidth < 900) {
             description.classList.add('hidden');
             heroHint.classList.add('hidden');
             menu.classList.add('hidden');
-            header.style.opacity = 0.2;
 
             modalButton.addEventListener('click', () => {
                 fullpageModal.classList.add('hidden');
                 title.textContent = 'Привет, на связи Ростелеком!';
                 description.classList.remove('hidden');
                 heroHint.classList.remove('hidden');
-                menu.classList.remove('hidden');
-                header.style.opacity = 1;         
+                menu.classList.remove('hidden');   
+                headerLogo.removeAttribute('style');     
             })
 
+        } else {
+            header.style.opacity = 1; 
+            headerLogo.removeAttribute('style');   
         }
 
     })

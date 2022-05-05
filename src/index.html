@@ -6,8 +6,14 @@
 	<body>
 		@@include('html/header.html',{})
 		<main id="fullpage">
-			
+
+			<!-- Готово -->
+			@@include('html/preloader.html', {})
+			<!-- Готово -->		
+
+			<!-- Готово -->
 			@@include('html/fullpage.html', {})
+			<!-- Готово -->
 
 			<!-- Готово -->
 			@@include('html/hero_block.html', {})
@@ -195,6 +201,13 @@
 		@@include('html/footer.html',{})
 		<script>
 
+			  	window.onload = function () {
+					document.body.classList.add('loaded_hiding');
+					window.setTimeout(function () {
+						document.body.classList.add('loaded');
+						document.body.classList.remove('loaded_hiding');
+					}, 500);
+				}
 			
 				new fullpage('#fullpage', {
 					css3: true,
