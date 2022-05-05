@@ -118,6 +118,7 @@ if (window.innerWidth < 900) {
         headerLogo.removeAttribute('style');   
         document.querySelector('.menu-name').classList.remove('hidden');
         document.querySelector('.header').style.backgroundColor = "white";
+        document.querySelector('body').style.setProperty("overflow", "auto", "important");
     })
 
     fullpage_api.setAutoScrolling(false);

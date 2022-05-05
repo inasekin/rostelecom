@@ -32,7 +32,7 @@ body {
   overflow-x: hidden;
 
   @media (max-width: 900px) {
-    overflow: auto !important;
+    overflow: hidden !important;
   }
 
   // Скролл заблокирован
