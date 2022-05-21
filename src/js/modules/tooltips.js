@@ -8,7 +8,8 @@ const backgroundInteriorPublic = document.querySelector('#interior_public');
 const closeTooltips = () => {
     const tooltips = document.querySelectorAll('.tooltip');
     const activeSvg = document.querySelectorAll('.active-map');
-
+    const documentButtons = document.querySelectorAll('.circle-button');
+    const documentPulses = document.querySelectorAll('.circle-pulse');
     
     for (const element of tooltips) {
         element.removeAttribute('data-show');
@@ -16,6 +17,14 @@ const closeTooltips = () => {
 
     for (const vector of activeSvg) {
         vector.removeAttribute('data-show');
+    }
+
+    for (const i of documentButtons) {
+        i.removeAttribute('data-show');
+    }
+
+    for (const i of documentPulses) {
+        i.setAttribute('data-show', '');
     }
 }
 
@@ -55,7 +64,6 @@ PointCircle.forEach((frame, idx) => {
     const tooltip = document.querySelector(`#tooltip-${index}`);
     const close = document.querySelector(`#tooltip-close-${index}`);
 
-
     frame.forEach((circle) => {
         const button = document.querySelector(`#button-point-${circle.id}`);
         const pulse = document.querySelector(`#circle-pulse-${circle.id}`);
@@ -68,6 +76,8 @@ PointCircle.forEach((frame, idx) => {
             const active = circle.activeSvg ? document.querySelector(circle.activeSvg) : undefined;
             header.innerText = circle.header;
             body.innerText = circle.body;
+
+
 
             pulse.removeAttribute('data-show');
 
@@ -92,13 +102,19 @@ PointCircle.forEach((frame, idx) => {
                 ],
             });
 
+            if(body.innerText.length < 150) {
+                body.style.height = 'max-content';
+            } else {
+                body.removeAttribute('style');
+            }
+
+
 
             close.addEventListener('click', () => {
                 body.scrollTop = 0;
                 tooltip.removeAttribute('data-show');
                 button.removeAttribute('data-show');
                 pulse.setAttribute('data-show', '');
-
                 if (active) active.removeAttribute('data-show');
                 // Disable the event listeners
                 popperInstance.setOptions((options) => ({
@@ -116,6 +132,7 @@ PointCircle.forEach((frame, idx) => {
                     // Make the tooltip visible
                     tooltip.setAttribute('data-show', '');
                     button.setAttribute('data-show', '');
+
                     if (active) active.setAttribute('data-show', '');
 
                     // Enable the event listeners
@@ -157,4 +174,3 @@ function setPulse() {
         })
     })
 }
-

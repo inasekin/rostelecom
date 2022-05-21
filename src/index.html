@@ -116,7 +116,7 @@
 								<div class="swiper-slide-text">
 									<h3>Единая система биометрии</h3>
 									<div class="swiper-slide-description">
-										В&nbsp;2018 году <a href="https://bio.rt.ru/business/" class="orange-link" target="_blank">Единая биометрическая система</a>, разработанная специалистами Ростелекома, стала применяться банками: с&nbsp;помощью лица клиент банка мог получить наличные из&nbsp;банкомата. Сегодня ЕБС применяется и в&nbsp;других областях — например, в&nbsp;общественном транспорте.
+										В&nbsp;2018 году <a href="https://bio.rt.ru/business/" class="orange-link" target="_blank">Единая биометрическая система</a>, стала применяться банками: с&nbsp;помощью лица клиент банка может получить наличные из&nbsp;банкомата, а&nbsp;также удаленно открыть счет и получить кредит на&nbsp;развитие бизнеса. .
 									</div>
 								</div>
 							</div>
@@ -227,7 +227,7 @@
 						
 						if (nextPage.querySelector('.tooltip-main')) {				
 							interval = setInterval(() => {
-								nextPage.querySelector('.tooltip-main').setAttribute('tooltip-hide', "");
+								nextPage.querySelector('.tooltip-main').setAttribute('tooltip-hide', '');
 							}, 10000);
 						}
 
@@ -257,17 +257,31 @@
 								break;
 						}
 
-						let bigCircles = document.querySelectorAll('.town__circle--big'),
-							 townButtons = document.querySelectorAll('.town__circle-button');
+						let bigCircles = document.querySelectorAll('.town__circle--big');
+						let townButtons = document.querySelectorAll('.town__circle-button');
+						let documentButtons = document.querySelectorAll('.circle-button');
+						let documentPulses = document.querySelectorAll('.circle-pulse');
+						let activeSvg = document.querySelectorAll('.active-map');
 
-						for (const circle of bigCircles) {
-							circle.removeAttribute('data-show');
+						for (const i of bigCircles) {
+							i.removeAttribute('data-show');
 						}
 
-						for (const button of townButtons) {
-							console.log(button);
-							button.removeAttribute('data-hide');
+						for (const i of townButtons) {
+							i.removeAttribute('data-hide');
 						}
+
+						for (const i of documentButtons) {
+							i.removeAttribute('data-show');
+						}		
+
+						for (const i of documentPulses) {
+							i.setAttribute('data-show', '');
+						}		
+
+						for (const i of activeSvg) {
+							i.removeAttribute('data-show');
+						}				
 
 					}
 				});

@@ -4,18 +4,14 @@
   top: 0;
   z-index: 10000;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     padding-bottom: 20px;
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
-
-    @media (max-width: 768px) {
-      margin-top: 17px;
-    }
+    margin-top: 20px;
   }
 
   &__logo {
@@ -25,7 +21,7 @@
       &__link {
 
         svg {
-          @media (max-width: 768px) {
+          @media (max-width: 900px) {
             width: 116px;
             height: 30px;
           }
