@@ -226,7 +226,7 @@
     border-radius: 6px;
     padding: 35px 25px;
     height: 245px;
-    margin-top: 400px;
+    margin-top: 540px;
     z-index: 10;
 
     @media (max-height: 790px) {
@@ -389,7 +389,6 @@
     display: flex;
     height: 100%;
     position: relative;
-    top: -120px;
 
     @media (max-width: 768px) {
       top: 0;
@@ -462,7 +461,7 @@
   &__vector {
     position: relative;
     width: 50%;
-    top: 250px;
+    top: 180px;
 
     @media (max-height: 850px) {
       top: 50px;
