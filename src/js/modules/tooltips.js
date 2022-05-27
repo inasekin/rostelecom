@@ -1,4 +1,4 @@
-import { PointCircle } from "../data.js";
+//import { PointCircle } from "../data.js";
 import {createPopper} from "@popperjs/core";
 
 const backgroundInteriorOffice = document.querySelector('#interior_office');
