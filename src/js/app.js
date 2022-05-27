@@ -5,7 +5,7 @@ import {createPopper} from "@popperjs/core";
 import {renderModals} from "./modules/modals.js";
 import {renderMenu, renderMenuFunctions} from "./modules/functions.js";
 import {renderAnimations} from "./modules/animations.js";
-//import {PointTown} from "./data.js";
+import {PointTown} from "./data.js";
 
 flsFunctions.isWebp();
 renderModals();
