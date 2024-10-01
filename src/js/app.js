@@ -30,10 +30,10 @@ townPublic.addEventListener('click', (e) => {
         }
         for (const circle of bigCircle) {
             circle.removeAttribute('data-show');
-        }   
+        }
         for (const button of buttons) {
             button.removeAttribute('data-hide');
-        }       
+        }
     }
 });
 
@@ -114,8 +114,8 @@ const headerLogo = document.querySelector('.header__logo');
 
 if (window.innerWidth < 900) {
 
-    window.addEventListener('load', () => { 
-        headerLogo.removeAttribute('style');   
+    window.addEventListener('load', () => {
+        headerLogo.removeAttribute('style');
         document.querySelector('.menu-name').classList.remove('hidden');
         document.querySelector('.header').style.backgroundColor = "white";
         document.querySelector('body').style.setProperty("overflow", "auto", "important");
@@ -144,8 +144,8 @@ if (window.innerWidth < 900) {
             menuName.textContent = 'Меню';
         })
     }
-
-    
-
+} else {
+    menuMobile.classList.add('hidden');
+    menuMobileContent.classList.add('hidden');
 }
 
