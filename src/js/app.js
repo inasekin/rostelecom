@@ -147,45 +147,5 @@ if (window.innerWidth < 900) {
 
     
 
-} else {
-    menuMobile.classList.add('hidden');
-    menuMobileContent.classList.add('hidden');
-
-
-    const menu = document.querySelector('.header__menu');
-    const header = document.querySelector('.header__content');
-    const fullpageModal = document.querySelector('#fullpage-modal');
-    const modalButton = document.querySelector('.fullpage-modal__hint');
-    const title = document.querySelector('.hero__title');
-    const description = document.querySelector('.hero__description');
-    const heroHint = document.querySelector('#section0').querySelector('.hint-container');
-    
-    window.addEventListener('load', () => {
-
-        if (!(window.innerWidth === screen.width && window.innerHeight === screen.height)) {
-
-            fullpageModal.onwheel = e => e.stopPropagation();
-
-            fullpageModal.classList.remove('hidden');
-            title.textContent = 'Для лучшего отображения откройте браузер в полноэкранном режиме';
-            description.classList.add('hidden');
-            heroHint.classList.add('hidden');
-            menu.classList.add('hidden');
-
-            modalButton.addEventListener('click', () => {
-                fullpageModal.classList.add('hidden');
-                title.textContent = 'Привет, на связи Ростелеком!';
-                description.classList.remove('hidden');
-                heroHint.classList.remove('hidden');
-                menu.classList.remove('hidden');   
-                headerLogo.removeAttribute('style');     
-            })
-
-        } else {
-            header.style.opacity = 1; 
-            headerLogo.removeAttribute('style');   
-        }
-
-    })
 }
 
